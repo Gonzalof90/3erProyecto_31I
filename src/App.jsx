@@ -6,6 +6,9 @@ import { Error } from "./page/Error";
 import { Login } from "./page/Login";
 import { Register } from "./page/Register";
 import { Contact } from "./page/Contact";
+import  'bootstrap/dist/css/bootstrap.min.css' ;
+
+
 
 function App() {
 
