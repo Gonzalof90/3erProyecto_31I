@@ -1,15 +1,31 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import { Home } from "./page/Home";
+import { About } from "./page/About";
+import { Error } from "./page/Error";
+import { Login } from "./page/Login";
+import { Register } from "./page/Register";
+import { Contact } from "./page/Contact";
 
 function App() {
-  
+
 
   return (
-  
-      <div>
-       <h1>hola</h1>
-      </div>
-   
-  )
+    <BrowserRouter>
+      <Routes>
+        {/* "index" es los mismo que hacer path="/" */}
+        <Route index element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
+
+        <Route path="/Error" element={<Error />} />
+
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
