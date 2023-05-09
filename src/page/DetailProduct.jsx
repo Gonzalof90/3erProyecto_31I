@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Layout } from "../Layouts/layout";
 import Slider from "react-slick";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
+import {  useParams } from "react-router-dom";
+
 
 export const DetailProduct = () => {
   const params = useParams();
@@ -82,6 +81,7 @@ export const DetailProduct = () => {
                   type="text"
                   placeholder="escriba aca detalles de este Pedido"
                 />
+                <input type="number"  placeholder="Cantidad" min={0} max={10} className="col-md-1 m-auto"/>
               </span>
             </Col>
             <div className="col-lg-5 m-3" >
