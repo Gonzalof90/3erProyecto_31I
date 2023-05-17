@@ -1,17 +1,10 @@
-import {Link} from "react-router-dom";
+import {Header} from '../components/Header';
 
-export const Layout = ({children}) => {
+
+export const Layout = ({ children }) => {
   return (
     <>
-    <header>
-        <ul>
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-
-            <li><Link to="/contact">Contact</Link></li>
-
-        </ul>
-    </header>
+    <Header />
 
     <div>{children}</div>
 

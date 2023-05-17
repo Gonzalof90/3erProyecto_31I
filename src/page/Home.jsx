@@ -1,10 +1,9 @@
-import { Layout } from "../Layouts/Layout"
+import { Layout } from "../Layouts/layout"
 import { Carousel, CarouselItem} from "react-bootstrap"
 
 export const Home = () => {
   return (
     <Layout>
-    <h1>Home</h1>
 
     <Carousel>
       <Carousel.Item>
@@ -45,7 +44,6 @@ export const Home = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-  );
 
 
     </Layout>
