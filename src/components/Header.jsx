@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Button, Container, Form, Nav, NavDropdown, Image} from 'react-bootstrap'
 import logo  from '../assets/imagenes/logo/logo.png';
-import { CupStraw, Egg, EggFried, PersonFill } from "react-bootstrap-icons"
+import { CupStraw, CurrencyDollar, Egg, EggFried, PersonFill } from "react-bootstrap-icons"
 
 
 export const Header = () => {
@@ -23,12 +23,12 @@ export const Header = () => {
             <Nav.Link href="#action1">Inicio</Nav.Link>
             <Nav.Link href="#action2">Nosotros</Nav.Link>
             <NavDropdown title="Categoria" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3"> <EggFried color="#803530" size={20}/> Comidas</NavDropdown.Item>
-              <NavDropdown.Item href="#action4"> <CupStraw color="#803530" size={20} className="align-center"/>
+              <NavDropdown.Item href="#action3"><EggFried color="#803530" size={20}/> Comidas</NavDropdown.Item>
+              <NavDropdown.Item href="#action4"><CupStraw color="#803530" size={20} className="align-center"/>
                 Bebidas
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
+              <NavDropdown.Item href="#action5"><CurrencyDollar color="#803530" size={20}/>
                 Ofertas
               </NavDropdown.Item>
             </NavDropdown>
