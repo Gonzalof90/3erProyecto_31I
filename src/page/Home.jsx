@@ -1,5 +1,11 @@
 import { Layout } from "../Layouts/layout"
-import { Carousel, CarouselItem} from "react-bootstrap"
+import { Carousel} from "react-bootstrap"
+// import Slider from "../components/Slider.jsx"
+import pizza from "../assets/imagenes/Carrusel/pizza.jpg"
+import tabla from "../assets/imagenes/Carrusel/tabla.jpg"
+import burguercode from "../assets/imagenes/Carrusel/burguercode.jpg"
+
+
 
 export const Home = () => {
   return (
@@ -9,41 +15,45 @@ export const Home = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://media.istockphoto.com/id/500466008/es/foto/bistecs-de-carne-de-res.jpg?s=612x612&w=0&k=20&c=sVc8KhnTkebIWmwTeNYmXqGfXikut1iclMQ8K8NxZv8="
+          src={pizza}
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://definicion.de/wp-content/uploads/2009/06/gastronomia.jpg"
+          src={tabla}
           alt="Second slide"
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://img.freepik.com/foto-gratis/chef-colocando-hierba-comida-gourmet_23-2148516908.jpg"
+          src={burguercode}
           alt="Third slide"
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    {/* <Slider>
+
+    </Slider> */}
+    
+
+
+
 
 
     </Layout>

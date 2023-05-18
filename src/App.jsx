@@ -7,7 +7,12 @@ import { DetailProduct } from "./page/DetailProduct";
 import { Login } from "./page/Login";
 import { Register } from "./page/Register";
 import { Contact } from "./page/Contact";
-import  'bootstrap/dist/css/bootstrap.min.css' ;
+import  'bootstrap/dist/css/bootstrap.min.css'
+import "slick-carousel/slick/slick.css" ; 
+import "slick-carousel/slick/slick-theme.css" ;
+
+
+
 
 
 
