@@ -1,0 +1,60 @@
+[
+    {
+      "username": "gonza2023",
+      "password": "$2a$10$M9UYBgyKa.uSgUknlenLBOcVbHIHHw23O.Ckt/iJvP9N/CXn6Eh22",
+      "email": "gonzalo@gmail.com",
+      "rol": "ADMIN",
+      "avatar": "https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg"
+    },
+    {
+      "username": "Fabri2023",
+      "password": "123345gf",
+      "email": "fabri@gmail.com",
+      "rol": "ADMIN",
+      "avatar": "https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg"
+    },
+    {
+      "username": "claudio2023",
+      "email": "claudio@gmail.com",
+      "password": "$2a$10$M9UYBgyKa.uSgUknlenLBOcVbHIHHw23O.Ckt/iJvP9N/CXn6Eh22",
+      "rol": "ADMIN",
+      "avatar": "https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg"
+
+    },
+    {
+      "username": "ezequiel2023",
+      "email": "ezequiel@gmail.com",
+      "password": "$2a$10$M9UYBgyKa.uSgUknlenLBOcVbHIHHw23O.Ckt/iJvP9N/CXn6Eh22",
+      "rol": "ADMIN",
+      "avatar": "https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg",
+      "id": 4
+    },
+    {
+      "username": "mariah2023",
+      "email": "maria_huerta@gmail.com",
+      "password": "$2a$10$M9UYBgyKa.uSgUknlenLBOcVbHIHHw23O.Ckt/iJvP9N/CXn6Eh22",
+      "rol": "ADMIN",
+      "avatar": "https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg"
+    },
+    {
+      "username": "Rodrigo2023",
+      "email": "rodrigo@gmail.com",
+      "password": "$2a$10$LqwE3cFb1AzRBesd07eCNOhMEgnIezji7X.rf6O.LX48rW3jwzrIu",
+      "rol": "ADMIN",
+      "avatar": "https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg"
+    },
+    {
+        "username": "walter2023",
+        "email": "walter@gmail.com",
+        "password": "$2a$10$LqwE3cFb1AzRBesd07eCNOhMEgnIezji7X.rf6O.LX48rW3jwzrIu",
+        "rol": "ADMIN",
+        "avatar": "https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg"
+      },
+      {
+        "username": "invitado2023",
+        "email": "invitado@gmail.com",
+        "password": "$2a$10$LqwE3cFb1AzRBesd07eCNOhMEgnIezji7X.rf6O.LX48rW3jwzrIu",
+        "rol": "REGULAR",
+        "avatar": "https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg"
+      }
+  ]

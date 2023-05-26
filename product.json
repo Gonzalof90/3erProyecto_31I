@@ -1,0 +1,166 @@
+[
+    {
+     
+      "name": "Pizza Napolitana",
+      "description": "La pizza napolitana, de masa tierna y delgada pero bordes altos, es la versión propia de la cocina napolitana de la pizza redonda. El término pizza napoletana, por su importancia histórica o regional, se emplea en algunas zonas como sinónimo de pizza tonda.",
+      "price": 2500,
+      "discount": 7,
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://osojimix.com/wp-content/uploads/2022/06/Para-la-masa-de-pizza-napolitana-8-hrs-fermentacion-Web-1.jpg"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://editorialtelevisa.brightspotcdn.com/dims4/default/89390eb/2147483647/strip/true/crop/672x672+264+0/resize/1000x1000!/quality/90/?url=https%3A%2F%2Fk2-prod-editorial-televisa.s3.amazonaws.com%2Fbrightspot%2Fwp-content%2Fuploads%2F2022%2F05%2Fpizza-napolitana.jpg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://www.latercera.com/resizer/mNes_h6_idfl_lg95UiXa9eNNIw=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/UJQEGMANSJGG5CSZZ22TPK66DA.JPG"
+        }
+      ]
+    },
+    {
+      
+      "name": "Pizza Fugazzeta",
+      "description": "La fugazzeta, también llamada fugazetta rellena, es una variedad de pizza argentina, originada en Buenos Aires, que consiste en colocar el queso entre dos discos de pizza, a modo de relleno, sobre el cual se agrega cebolla.",
+      "price": 2100,
+      "discount": 5,
+      "images": [
+        {
+            "id":1,
+          "primary": false,
+          "url": "https://cdn0.recetasgratis.net/es/posts/7/0/2/pizza_fugazza_7207_orig.jpg"
+        },
+        {
+            "id":2,
+          "primary": true,
+          "url": "https://img-global.cpcdn.com/recipes/973aa4b925d605e7/400x400cq70/photo.jpg"
+        },
+        {
+            "id":3,
+          "primary": false,
+          "url": "https://www.thespruceeats.com/thmb/Rlhhh1kXMArdvRrVSZEkjhTp2-4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fugazza1-56b549cd5f9b5829f82d3106.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Hamburguesa",
+      "price": 2300,
+      "discount": 10,
+      "description": "Una hamburguesa es un sándwich hecho a base de carne molida o de origen vegetal, ​ aglutinada en forma de filete cocinado a la parrilla o a la plancha, aunque también puede freírse u hornearse. Fuera del ámbito de habla hispana, es más común encontrar la denominación estadounidense burger, acortamiento de hamburger.",
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/NCI_Visuals_Food_Hamburger.jpg/640px-NCI_Visuals_Food_Hamburger.jpg"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://assets.unileversolutions.com/recipes-v2/210995.jpg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://resizer.glanacion.com/resizer/aDuSrK-kFy1v27LtOHPRYl4QlRs=/768x0/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/RHVGX3MHVRB7VGEXBEVCCZHW5I.jpg"
+        }
+      ]
+     
+    },
+    {
+      "name": "Sandwich de Milanesa",
+      "price": 1200,
+      "discount": 8,
+      "description": "El sándwich​ de milanesa es un plato típico en la gastronomía argentina y tucumana. Se compone de dos rebanadas de pan entre las cuales se coloca una milanesa, lechuga, tomate y ocasionalmente cebolla; lleva como aderezo distintas salsas como mayonesa, mostaza o kétchup.",
+      "images": [
+        {
+          "id": 1,
+          "primary": false,
+          "url": "https://images.pagina12.com.ar/styles/focal_content_1200x1050/public/2021-06/172823-whatsapp-20image-202021-06-24-20at-2015-21-04.jpeg?h=c29551c4&itok=b5Ahk2EO"
+        },
+        {
+          "id": 2,
+          "primary": true,
+          "url": "https://www.recetasnatura.com.ar/sites/default/files/sin_titulo-1_0.jpg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://www.cucinare.tv/wp-content/uploads/2020/10/Disen%CC%83o-sin-ti%CC%81tulo.png"
+        }
+      ]
+    },
+    {
+      "name": "Lomito",
+      "price": 1450,
+      "discount":10,
+      "description": "El lomito, sándwich de lomo o simplemente lomo es un sándwich típico de las gastronomías argentina, paraguaya y uruguaya",
+      "images": [
+        {
+          "id": 1,
+          "primary": false,
+          "url": "https://www.clarin.com/img/2021/07/26/el-lomito-uno-de-los___u-aUfp64d_640x361__1.jpg"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://www.lavoz.com.ar/resizer/ba9eRr-PtFXViIsqsbr32E4_4tY=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/KL65JXJGSZAEPNQFCRWA2RABYU.jpg"
+        },
+        {
+          "id": 3,
+          "primary": true,
+          "url": "https://clarin.com/img//2021/07/19/hgA-CEG32_340x340__1.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Milanesa a la Napolitana",
+      "price": 3500,
+      "discount": 15,
+      "description": "La milanesa a la napolitana es un plato típico de la gastronomía rioplatense propia de Argentina y Uruguay que tiene su origen en la influencia de la inmigración italiana.",
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://resizer.glanacion.com/resizer/DX1-dyjtqe3efPEahil_dwkYeuQ=/768x0/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://www.recetas360.com/wp-content/uploads/2023/03/como-hacer-milanesa-napolitana-receta-argentina-500x500.jpeg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://www.annarecetasfaciles.com/files/4aa.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Empanadas",
+      "price": 250,
+      "discount": 0,
+      "description": "Una empanada es una fina masa de pan, masa quebrada u hojaldre rellena con una preparación salada o dulce y cocida al horno o frita. El relleno puede incluir carnes rojas o blancas, pescado, verduras o fruta.",
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://assets.elgourmet.com/wp-content/uploads/2023/03/cover_fpa6sn8vqc_empanadas.jpg"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://resizer.glanacion.com/resizer/othdWx273LRpcCnnGXYd4rZmrwU=/768x0/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/7IXBPJ5JHBDCBHSUDK3CFZ5XHU.jpg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://static.eldiario.es/clip/c582f7f0-0466-4175-8be9-0ad06c1113a1_16-9-discover-aspect-ratio_default_0.jpg"
+        }
+      ]
+    }
+  ]
