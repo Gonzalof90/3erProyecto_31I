@@ -2,13 +2,15 @@ import React from 'react'
 import { Navbar, Button, Container, Form, Nav, NavDropdown, Image} from 'react-bootstrap'
 import logo  from '../assets/imagenes/logo/logo.png';
 import { CupStraw, CurrencyDollar, Egg, EggFried, PersonFill } from "react-bootstrap-icons"
+import { Link } from 'react-router-dom';
+
 
 
 export const Header = () => {
   return (
     <Navbar bg="warning" expand="lg" sticky='top'>
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Navbar.Brand as={Link} to="/home">
 					
 				<Image src={logo} style= {{width:"75px"}}
 				/>
@@ -20,8 +22,9 @@ export const Header = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Inicio</Nav.Link>
-            <Nav.Link href="#action2">Nosotros</Nav.Link>
+            <Nav.Link as={Link} to="/home" > Home </Nav.Link>
+            <Nav.Link as={Link} to="/About">Nosotros</Nav.Link>
+            <Nav.Link as={Link} to="/Contact">Contacto</Nav.Link>
             <NavDropdown title="Categoria" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3"><EggFried color="#803530" size={20}/> Comidas</NavDropdown.Item>
               <NavDropdown.Item href="#action4"><CupStraw color="#803530" size={20} className="align-center"/>
