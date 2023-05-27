@@ -3,20 +3,20 @@ import { Layout } from "../Layouts/layout";
 import Slider from "react-slick";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import {  useParams } from "react-router-dom";
+const HOST_SERVER = import.meta.env.VITE_HOST_SERVER;
 
 
 export const DetailProduct = () => {
   const params = useParams();
   const [product, setProduct] = useState({});
+  const {  idProduct } = useParams();
   console.log(params.idProduct); // 1
-
+  
   useEffect(() => {
-    fetch(`http://localhost:5173/products?id=${params.idProduct}`)
+    fetch(`${HOST_SERVER}/products/${idProduct}`)
       .then((res) => res.json())
-      .then((product) => {
-        console.log("el producto encontrado es", product[0]);
-        setProduct(product[0]);
-      });
+      .then(({ data, ok }) => (ok ? setProduct(data) : null))
+      .catch((err) => console.error(err));
   }, []);
 
   const formatterPeso = new Intl.NumberFormat("es-CO", {
