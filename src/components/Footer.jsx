@@ -27,7 +27,7 @@ export const Footer = () => {
           <Instagram color="#803530" size={30}/>
 
         </Navbar.Brand>
-          <Navbar.Brand href="#" className="mx-2" >
+          <Navbar.Brand as ={Link} to="/Error" href="#" className="mx-2" >
           <Tiktok color="#803530" size={30}/>
 
           </Navbar.Brand>

@@ -5,7 +5,8 @@ import pizza from "../assets/imagenes/Carrusel/pizza.jpg";
 
 
 
-const product = {
+const product = 
+  {
   id: 1,
   description:
     "Pizza",
@@ -13,10 +14,14 @@ const product = {
   images: [{ url: pizza }],
 };
 
+
+
+
 export const Home = () => {
   return (
     <Layout>
       <CarouselComponent />
+      <h2 className="text-center">Nuestros productos destacados</h2>
       <SliderComponent  product={product}/>
     </Layout>
   );

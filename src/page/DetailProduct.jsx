@@ -79,7 +79,7 @@ export const DetailProduct = () => {
                 rows="3"
                 className="col-md-5 m-auto"
                   type="text"
-                  placeholder="escriba aca detalles de este Pedido"
+                  placeholder="escriba acá detalles de este Pedido"
                 />
                 <input type="number"  placeholder="Cantidad" min={0} max={10} className="col-md-1 m-auto"/>
               </span>

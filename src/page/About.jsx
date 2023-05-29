@@ -44,7 +44,7 @@ En Dev Food, estamos comprometidos con tu satisfacción y comodidad. Nos esforza
     <Card style={{ width: '12rem' }}>
       <Card.Img variant="top" src={nosotros8} />
       <Card.Body>
-        <Card.Title>Fabricio Paz</Card.Title>
+        <Card.Title>Fabricio R. Paz</Card.Title>
         <Card.Text>
           Full-stack Developer
         </Card.Text>
