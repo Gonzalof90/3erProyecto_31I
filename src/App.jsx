@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Home } from "./page/Home";
+import { Admin } from "./page/Admin";
 import { About } from "./page/About";
 import { Error } from "./page/Error";
 import { DetailProduct } from "./page/DetailProduct";
@@ -34,6 +35,7 @@ function App() {
 
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
+        <Route path="/Admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   );
