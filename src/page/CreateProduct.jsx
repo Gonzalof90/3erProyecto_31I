@@ -376,7 +376,7 @@ export const CreateProduct = () => {
             </Col>
             <Col md={6} lg={3}>
               <Form.Group className="my-3">
-                <Button variant="primary" type="submit" className="w-100 mt-3">
+                <Button variant="warning" type="submit" className="w-100 mt-3">
                   Guardar
                 </Button>
               </Form.Group>
