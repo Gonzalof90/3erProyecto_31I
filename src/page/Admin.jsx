@@ -150,7 +150,7 @@ export const Admin = () => {
           </Table>
         </Tab>
         <Tab eventKey="usuarios" title="Usuarios">
-          <Button as={Link} to="/products/create">
+          <Button as={Link} to="/users/create">
             Nuevo Usuario
           </Button>
 
@@ -159,8 +159,8 @@ export const Admin = () => {
               <tr>
                 <th>Nombre Usuario</th>
                 <th>Email</th>
-                <th>Avatar</th>
                 <th>Rol</th>
+                <th>Avatar                                    </th>
                 <th>Activo</th>
               </tr>
             </thead>
@@ -170,9 +170,7 @@ export const Admin = () => {
                   <tr key={user._id}>
                     <td>{user.username}</td>
                     <td>{user.email}</td>
-                    <td>{user.password}</td>
                     <td>{user.rol}</td>
-             
                     <td>
                       <img
                         width={100}
@@ -203,13 +201,7 @@ export const Admin = () => {
                   </tr>
                 );
               })}
-              {/* <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-              </tr> */}
+   
             </tbody>
           </Table>
         </Tab>
