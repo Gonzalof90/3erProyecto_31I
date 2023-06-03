@@ -26,7 +26,7 @@ export const Login = () => {
   const [error, setError] = useState("");
   const redirect = useNavigate();
 
-  /* MANEJADOR */
+
   const handleChangeEmail = (e) => {
     setEmail(e.target.value);
   };
