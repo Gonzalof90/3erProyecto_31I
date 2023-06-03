@@ -1,10 +1,16 @@
 import React from 'react'
 import { Navbar, Button, Container, Form, Nav, NavDropdown, Image} from 'react-bootstrap'
 import logo  from '../assets/imagenes/logo/logo.png';
-import { CupStraw, Egg, EggFried, PersonFill } from "react-bootstrap-icons"
+import { CupStraw, EggFried } from "react-bootstrap-icons"
+import { ModaLogin } from './ModaLogin';
+
+
 
 
 export const Header = () => {
+  
+
+
   return (
     <Navbar bg="warning" expand="lg" sticky='top'>
       <Container fluid>
@@ -42,7 +48,9 @@ export const Header = () => {
             />
             <Button variant="outline-danger">Buscar</Button>
           </Form>
-					<Nav.Link href="#action3"><PersonFill color="#803530" size={50} /></Nav.Link>
+					<Nav.Link href="#action3">
+            <ModaLogin />
+          </Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

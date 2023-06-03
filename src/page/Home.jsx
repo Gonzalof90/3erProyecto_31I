@@ -7,10 +7,11 @@ import burguercode from "../assets/imagenes/Carrusel/burguercode.jpg"
 
 
 
+
 export const Home = () => {
   return (
     <Layout>
-
+    
     <Carousel>
       <Carousel.Item>
         <img
@@ -51,7 +52,6 @@ export const Home = () => {
 
     </Slider> */}
     
-
 
 
 
