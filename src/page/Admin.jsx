@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Button, Form, FormControl, Tab, Table, Tabs } from "react-bootstrap";
+import { useContext, useEffect, useState } from "react";
+import { Button, Form, Tab, Table, Tabs } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { Layout } from "../Layouts/layout";
 import { UserContext } from "../contexts/userContext";
@@ -11,39 +11,58 @@ export const Admin = () => {
   const [products, setProducts] = useState([]);
   const [users, setUsers] = useState([]);
   const redirect = useNavigate();
-  const { token } = useContext(UserContext);
+  const { token, logout } = useContext(UserContext);
   const mySwal = withReactContent(Swal);
 
   const getUsers = () => {
-    fetch(`${serverHost}/users`)
-    .then((res) => res.json())
-    .then(({ data}) => setUsers(data));
-    
-  }
+    fetch(`${serverHost}/users`,{
+      headers: {
+        Authorization: token,
+      }
+    })
+      .then((res) => res.json())
+      .then(({ data,ok }) => {
+       ok ? setUsers(data) : logout()
+      });
+  };
 
   useEffect(() => {
-    getUsers()
+    getUsers();
   }, []);
-
 
   const getProducts = () => {
     fetch(`${serverHost}/products`)
-    .then((res) => res.json())
-    .then(({ data }) => setProducts(data));
-  }
-
-
+      .then((res) => res.json())
+      .then(({ data }) => setProducts(data));
+  };
 
   useEffect(() => {
-    getProducts()
+    getProducts();
   }, []);
 
-  const handleCheckActive = async (id) => {
-    await fetch(`${serverHost}/products/toggle/${id}`, {
-      headers: {
-        Authorization: token,
-      },
-    });
+  const handleCheckActive = async (id, { target: { checked } }) => {
+    try {
+      const productsMap = products.map((product) => {
+        if (product._id === id) {
+          return {
+            ...product,
+            available: checked,
+          };
+        }
+        return product;
+      });
+      setProducts(productsMap);
+
+      const { ok } = await fetch(`${serverHost}/products/toggle/${id}`, {
+        method: "PUT",
+        headers: {
+          Authorization: token,
+        },
+      });
+      if (!ok) logout(null);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleDelete = ({ id, name }) => {
@@ -77,7 +96,7 @@ export const Admin = () => {
                   showConfirmButton: false,
                 })
                 .then(() => {
-                  ok ? redirect("/") : redirect("/login");
+                  ok ? redirect("/") : logout();
                 });
             });
         }
@@ -109,43 +128,51 @@ export const Admin = () => {
               </tr>
             </thead>
             <tbody>
-              {products.map((product) => {
-                return (
-                  <tr key={product._id}>
-                    <td>{product.name}</td>
-                    <td>{product.description}</td>
-                    <td>{product.price}</td>
-                    <td>{product.discount}</td>
-                    <td>
-                      <img
-                        width={100}
-                        height={100}
-                        style={{ objectFit: "contain" }}
-                        src={product.images.find(({ primary }) => primary)?.url}
-                        alt={product.name}
-                      />
-                    </td>
-                    <td>
-                      <Form.Check
-                        onChange={() => handleCheckActive(product._id)}
-                        checked={product.available}
-                      />
-                    </td>
-                    <td>
-                      <Button as={Link} to={`/products/update/${product._id}`}>
-                        Editar
-                      </Button>
+              {products.length &&
+                products.map((product) => {
+                  return (
+                    <tr key={product._id}>
+                      <td>{product.name}</td>
+                      <td>{product.description}</td>
+                      <td>{product.price}</td>
+                      <td>{product.discount}</td>
+                      <td>
+                        <img
+                          width={100}
+                          height={100}
+                          style={{ objectFit: "contain" }}
+                          src={
+                            product.images.find(({ primary }) => primary)?.url
+                          }
+                          alt={product.name}
+                        />
+                      </td>
+                      <td>
+                        <Form.Check
+                          onChange={(event) =>
+                            handleCheckActive(product._id, event)
+                          }
+                          checked={product.available}
+                        />
+                      </td>
+                      <td>
+                        <Button
+                          as={Link}
+                          to={`/products/update/${product._id}`}
+                        >
+                          Editar
+                        </Button>
 
-                      <Button
-                        variant="danger"
-                        onClick={() => handleDelete(product)}
-                      >
-                        Eliminar
-                      </Button>
-                    </td>
-                  </tr>
-                );
-              })}
+                        <Button
+                          variant="danger"
+                          onClick={() => handleDelete(product)}
+                        >
+                          Eliminar
+                        </Button>
+                      </td>
+                    </tr>
+                  );
+                })}
             </tbody>
           </Table>
         </Tab>
@@ -160,12 +187,12 @@ export const Admin = () => {
                 <th>Nombre Usuario</th>
                 <th>Email</th>
                 <th>Rol</th>
-                <th>Avatar                                    </th>
+                <th>Avatar </th>
                 <th>Activo</th>
               </tr>
             </thead>
             <tbody>
-            {users.map((user) => {
+              {users.map((user) => {
                 return (
                   <tr key={user._id}>
                     <td>{user.username}</td>
@@ -201,7 +228,6 @@ export const Admin = () => {
                   </tr>
                 );
               })}
-   
             </tbody>
           </Table>
         </Tab>

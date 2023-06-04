@@ -22,7 +22,7 @@ export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { setUser,setToken } = useContext(UserContext);
+  const { setUser, setToken } = useContext(UserContext);
   const [error, setError] = useState("");
   const redirect = useNavigate();
 
@@ -62,7 +62,7 @@ export const Login = () => {
     setUser(response.data);
     setToken(response.token)
     window.localStorage.setItem('token',response.token)
-    redirect("/user/profile");
+    response.data.rol === "ADMIN" ?  redirect("/admin") : redirect('/')
   };
 
   return (

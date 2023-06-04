@@ -50,7 +50,7 @@ export const CreateProduct = () => {
   const [errorDescription, setErrorDescription] = useState("");
   const [errorDiscount, setErrorDiscount] = useState("");
 
-  const { token } = useContext(UserContext);
+  const { token,logout } = useContext(UserContext);
 
   // HANDLERS
   const handleInputName = ({ target }) => {
@@ -112,7 +112,7 @@ export const CreateProduct = () => {
             icon: ok ? "success" : "error",
           })
           .then(() => {
-            ok ? redirect("/") : redirect("/login");
+            ok ? redirect("/admin") : logout();
           });
       });
   };
