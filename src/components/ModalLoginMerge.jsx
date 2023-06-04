@@ -128,7 +128,7 @@ export const ModalLoginMerge = () => {
               </Col>
             </Row>
             <ModalHeaderComponent>
-                <Modal.Title className='w-100 text-center ms-3'>
+                <Modal.Title className='w-100 text-center ms-3 bg-warning'>
                   <img src={logo} style={{width:"50px"}}></img>
                 </Modal.Title>  
             </ModalHeaderComponent>  
