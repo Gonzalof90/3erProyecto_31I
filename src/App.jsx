@@ -10,6 +10,7 @@ import { Contact } from "./page/Contact";
 import  'bootstrap/dist/css/bootstrap.min.css'
 import "slick-carousel/slick/slick.css" ; 
 import "slick-carousel/slick/slick-theme.css" ;
+import { ProfileUser } from "./page/ProfileUser";
 
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/products/detail/:idProduct" element={<DetailProduct />} />
 
         <Route path="/Error" element={<Error />} />
+        <Route path="/ProfileUser" element={<ProfileUser />} />
 
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />

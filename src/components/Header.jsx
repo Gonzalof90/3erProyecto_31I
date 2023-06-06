@@ -3,6 +3,8 @@ import { Navbar, Button, Container, Form, Nav, NavDropdown, Image} from 'react-b
 import logo  from '../assets/imagenes/logo/logo.png';
 import { CupStraw, EggFried } from "react-bootstrap-icons"
 import { ModaLogin } from './ModaLogin';
+import { ModalLoginMerge } from './ModalLoginMerge';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -28,6 +30,7 @@ export const Header = () => {
           >
             <Nav.Link href="#action1">Inicio</Nav.Link>
             <Nav.Link href="#action2">Nosotros</Nav.Link>
+            <NavLink to={'/ProfileUser'} >Perfil usuario</NavLink>
             <NavDropdown title="Categoria" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3"> <EggFried color="#803530" size={20}/> Comidas</NavDropdown.Item>
               <NavDropdown.Item href="#action4"> <CupStraw color="#803530" size={20} className="align-center"/>
@@ -48,8 +51,8 @@ export const Header = () => {
             />
             <Button variant="outline-danger">Buscar</Button>
           </Form>
-					<Nav.Link href="#action3">
-            <ModaLogin />
+					<Nav.Link >
+            <ModalLoginMerge />
           </Nav.Link>
         </Navbar.Collapse>
       </Container>

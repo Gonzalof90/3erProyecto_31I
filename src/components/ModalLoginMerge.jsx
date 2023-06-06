@@ -9,6 +9,7 @@ const HOST_SERVER = import.meta.env.VITE_HOST_SERVER;
 
 const LinkComponent = styled(Link)`
   color: #ff601c;
+  text-decorartion: none;
   transition: 0.35s;
   &:hover {
     color: #ffb80b;
@@ -57,6 +58,8 @@ background-color: #ffc107;
 border: none;
 
 `;
+
+
 const imgRepartidos = "https://elcomercio.pe/resizer/D4MbctPzmLNMtkxfL9WowHmOg4Q=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/LKK54KMX6ZDGBPF4XBQM46SR6U.jpg"
 
 
@@ -122,11 +125,6 @@ export const ModalLoginMerge = () => {
         <Modal show={show} onHide={handleClose} >
 
           
-            <Row>
-              <Col lg={{ span: 4, offset: 4 }} md={{ span: 6, offset: 3 }}>
-                <h1 className="text-center">INICIO DE SESIÓN</h1>
-              </Col>
-            </Row>
             <ModalHeaderComponent>
                 <Modal.Title className='w-100 text-center ms-3 bg-warning'>
                   <img src={logo} style={{width:"50px"}}></img>
@@ -135,13 +133,13 @@ export const ModalLoginMerge = () => {
             <Modal.Body className='show-grid'>
                 <Container>
                   <Row>
-                    <Col>
+                    <Col md={6} className='overflow-hidden rounded'>
                       <div className='w-100 d-flex  justify-content-center'>
                         <Image style={{objectFit: "cover"}} src={imgRepartidos}/>
                       </div>
                     </Col>
-                    <Col xs={12} md={6} className='d-flex flex-column justify-content-around'>
-                      <Form onSubmit={handleSubmit}>
+                    <Col xs={12} md={6} className='d-flex flex-column justify-content-between'>
+                      <Form onSubmit={handleSubmit} className=''>
                           <FormGroupComponent className="mb-3" controlId="formBasicEmail">
                             <FormLabelComponent  className={email.length > 0 ? 'has-input' : ``}>
                               Correo electrónico
@@ -166,16 +164,16 @@ export const ModalLoginMerge = () => {
                               />
                           </FormGroupComponent>
                             <p className="text-danger">{error}</p>
-                          <ContainerButton>
-                              <LinkComponent to="/register">
-                                No estoy registrado
-                              </LinkComponent>
-
-                              <Button  type="submit" className='w-50 btn-outline-light' style={{backgroundColor:"#803530",}} onClick={handleClose}>
+                          <div className='d-flex justify-content-center'>
+                              <Button  type="submit" className='w-75 btn-outline-light' style={{backgroundColor:"#803530",}} onClick={handleClose}>
                                 Iniciar Sesión
                               </Button>
-                          </ContainerButton>
+                          </div>
                       </Form>
+                      <div className='d-flex flex-column justify-content-between'>
+                          <LinkComponent >No puedo ingresar</LinkComponent>    
+                          <LinkComponent to={"/registers"}>Crear cuenta</LinkComponent>
+                      </div>
                     </Col> 
                   </Row>   
                 </Container>                 
