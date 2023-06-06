@@ -1,61 +1,32 @@
-import { Layout } from "../Layouts/layout"
-import { Carousel} from "react-bootstrap"
-// import Slider from "../components/Slider.jsx"
-import pizza from "../assets/imagenes/Carrusel/pizza.jpg"
-import tabla from "../assets/imagenes/Carrusel/tabla.jpg"
-import burguercode from "../assets/imagenes/Carrusel/burguercode.jpg"
-
-
-
+import { Layout } from "../Layouts/layout";
+import { CarouselComponent } from "../components/Carousel.jsx";
+import { SliderComponent } from "../components/Slider.jsx";
+import { useEffect } from "react";
+import { useState } from "react";
+const HOST_SERVER = import.meta.env.VITE_HOST_SERVER;
 
 export const Home = () => {
+  const [products, setProducts] = useState([]);
+  const getData = async () => {
+    try {
+      const { ok, data } = await fetch(`${HOST_SERVER}/products`).then((res) =>
+        res.json()
+      );
+      ok && setProducts(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <Layout>
-    
-    <Carousel>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={pizza}
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={tabla}
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={burguercode}
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    {/* <Slider>
-
-    </Slider> */}
-    
-
-
-
-
+      <CarouselComponent />
+      <h2 className="text-center">Nuestros productos destacados</h2>
+      <SliderComponent products={products} />
     </Layout>
-  )
-}
+  );
+};

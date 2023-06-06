@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Layout } from "../Layouts/layout";
 import Slider from "react-slick";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import {  useParams } from "react-router-dom";
+const HOST_SERVER = import.meta.env.VITE_HOST_SERVER;
 
 
 export const DetailProduct = () => {
   const params = useParams();
   const [product, setProduct] = useState({});
+  const {  idProduct } = useParams();
   console.log(params.idProduct); // 1
-
+  
   useEffect(() => {
-    fetch(`http://localhost:5173/products?id=${params.idProduct}`)
+    fetch(`${HOST_SERVER}/products/${idProduct}`)
       .then((res) => res.json())
-      .then((product) => {
-        console.log("el producto encontrado es", product[0]);
-        setProduct(product[0]);
-      });
-  }, []);
+      .then(({ data, ok }) => (ok ? setProduct(data) : null))
+      .catch((err) => console.error(err));
+  }, [idProduct]);
 
   const formatterPeso = new Intl.NumberFormat("es-CO", {
     style: "currency",
@@ -27,7 +27,6 @@ export const DetailProduct = () => {
 
   return (
     <Layout>
-      <h1>detalle de producto</h1>
       <Container className="my-5">
         <Row>
           <Slider
@@ -72,20 +71,20 @@ export const DetailProduct = () => {
               </span>
             </p>
           </div>
-          <div>
+          <div className="mt-3">
             <Col>
               <span className="col-lg-6 m-auto">
                 <input 
                 rows="3"
                 className="col-md-5 m-auto"
                   type="text"
-                  placeholder="escriba aca detalles de este Pedido"
+                  placeholder="escriba acá detalles de este Pedido"
                 />
                 <input type="number"  placeholder="Cantidad" min={0} max={10} className="col-md-1 m-auto"/>
               </span>
             </Col>
             <div className="col-lg-5 m-3" >
-              <Button variant="secondary">Agrega al Pedido</Button>
+              <Button variant="secondary mx-1">Agrega al Pedido</Button>
               <Button variant="outline-secondary">Cancelar</Button>
             </div>
           </div>
