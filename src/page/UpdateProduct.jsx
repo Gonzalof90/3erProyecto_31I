@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Layout } from "../Layouts/layout";
 import {
   Button,
@@ -48,7 +48,7 @@ export const UpdateProduct = () => {
     ],
   };
   const [product, setProduct] = useState(initialStateProduct);
-  const { token } = useContext(UserContext);
+  const { token, logout } = useContext(UserContext);
   const handleName = ({ target }) => {
     setProduct({
       ...product,
@@ -114,7 +114,7 @@ export const UpdateProduct = () => {
     fetch(`${HOST_SERVER}/products/${idProduct}`)
       .then((res) => res.json())
       .then(({ data, ok }) => (ok ? setProduct(data) : null));
-  }, []);
+  }, [idProduct]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -137,7 +137,7 @@ export const UpdateProduct = () => {
             timer: 2000,
           })
           .then(() => {
-            ok ? redirect(`/users/admin`) : redirect("/login");
+            ok ? redirect(`/admin`) : logout() ;
           });
       });
   };

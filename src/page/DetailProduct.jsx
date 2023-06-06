@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Layout } from "../Layouts/layout";
 import Slider from "react-slick";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
@@ -17,7 +17,7 @@ export const DetailProduct = () => {
       .then((res) => res.json())
       .then(({ data, ok }) => (ok ? setProduct(data) : null))
       .catch((err) => console.error(err));
-  }, []);
+  }, [idProduct]);
 
   const formatterPeso = new Intl.NumberFormat("es-CO", {
     style: "currency",
@@ -27,7 +27,6 @@ export const DetailProduct = () => {
 
   return (
     <Layout>
-      <h1>detalle de producto</h1>
       <Container className="my-5">
         <Row>
           <Slider
@@ -72,7 +71,7 @@ export const DetailProduct = () => {
               </span>
             </p>
           </div>
-          <div>
+          <div className="mt-3">
             <Col>
               <span className="col-lg-6 m-auto">
                 <input 
@@ -85,7 +84,7 @@ export const DetailProduct = () => {
               </span>
             </Col>
             <div className="col-lg-5 m-3" >
-              <Button variant="secondary">Agrega al Pedido</Button>
+              <Button variant="secondary mx-1">Agrega al Pedido</Button>
               <Button variant="outline-secondary">Cancelar</Button>
             </div>
           </div>

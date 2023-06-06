@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 const HOST_SERVER = import.meta.env.VITE_HOST_SERVER;
 const userInitialState = {
-  id: "",
+  _id: "",
   username: "",
   email: "",
   password: "",
@@ -23,7 +23,8 @@ export const UserProvider = ({ children }) => {
         },
       }).then((res) => res.json());
       ok ? setUser(data) : setUser(userInitialState);
-      data ? localStorage.setItem("user", JSON.stringify(data)) : null;
+
+      localStorage.setItem("user", JSON.stringify(data))
     } catch (error) {
       console.log(error.message);
     }
@@ -46,7 +47,7 @@ export const UserProvider = ({ children }) => {
   const logout = () => {
     setUser(userInitialState);
     setToken(null);
-    localStorage.removeItem("token");
+    localStorage.clear();
   };
 
   return (
