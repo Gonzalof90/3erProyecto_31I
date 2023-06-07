@@ -5,24 +5,26 @@ import { Layout } from "../Layouts/layout";
 import { UserContext } from "../contexts/userContext";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import { SearchContext } from "../contexts/searchContext";
 const serverHost = import.meta.env.VITE_HOST_SERVER;
 
 export const Admin = () => {
   const [products, setProducts] = useState([]);
   const [users, setUsers] = useState([]);
-  const redirect = useNavigate();
   const { token, logout } = useContext(UserContext);
   const mySwal = withReactContent(Swal);
+  const redirect = useNavigate();
+  const { keywordGlobal } = useContext(SearchContext);
 
   const getUsers = () => {
-    fetch(`${serverHost}/users`,{
+    fetch(`${serverHost}/users`, {
       headers: {
         Authorization: token,
-      }
+      },
     })
       .then((res) => res.json())
-      .then(({ data,ok }) => {
-       ok ? setUsers(data) : logout()
+      .then(({ data, ok }) => {
+        ok ? setUsers(data) : logout();
       });
   };
 
@@ -30,15 +32,15 @@ export const Admin = () => {
     getUsers();
   }, []);
 
-  const getProducts = () => {
-    fetch(`${serverHost}/products`)
+  const getProducts = (keyword) => {
+    fetch(`${serverHost}/products?q=${keyword}`)
       .then((res) => res.json())
       .then(({ data }) => setProducts(data));
   };
 
   useEffect(() => {
-    getProducts();
-  }, []);
+    getProducts(keywordGlobal);
+  }, [keywordGlobal]);
 
   const handleCheckActive = async (id, { target: { checked } }) => {
     try {
@@ -59,7 +61,7 @@ export const Admin = () => {
           Authorization: token,
         },
       });
-      if (!ok) logout(null);
+      if (!ok) logout();
     } catch (error) {
       console.log(error);
     }
@@ -177,10 +179,6 @@ export const Admin = () => {
           </Table>
         </Tab>
         <Tab eventKey="usuarios" title="Usuarios">
-          <Button as={Link} to="/users/create">
-            Nuevo Usuario
-          </Button>
-
           <Table striped bordered hover className="mt-5">
             <thead>
               <tr>

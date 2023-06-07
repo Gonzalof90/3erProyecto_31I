@@ -1,4 +1,3 @@
-import React from 'react'
 import {Carousel} from "react-bootstrap"
 import pizza from "../assets/imagenes/Carrusel/pizza.jpg";
 import tabla from "../assets/imagenes/Carrusel/tabla.jpg";
@@ -11,22 +10,22 @@ export const CarouselComponent = () => {
         <Carousel.Item>
           <img className="d-block w-100" src={pizza} alt="First slide" />
           <Carousel.Caption>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <p className="text-light fs-4 fw-bold" style={{textShadow:'1px 1px 5px gray',userSelect:'none'}}>Las mejores Pizzas</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={tabla} alt="Second slide" />
 
           <Carousel.Caption>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p className="text-light fs-4 fw-bold" style={{textShadow:'1px 1px 5px gray',userSelect:'none'}}>Tablas únicas e indefinidas</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={burguercode} alt="Third slide" />
 
           <Carousel.Caption>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            <p className="text-light fs-4 fw-bold" style={{textShadow:'1px 1px 5px gray',userSelect:'none'}}>
+              No te comas el verso
             </p>
           </Carousel.Caption>
         </Carousel.Item>

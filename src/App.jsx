@@ -30,10 +30,24 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Products" element={<ListProducts />} />
         <Route path="/products/detail/:idProduct" element={<DetailProduct />} />
-        <Route path="/Error" element={<Error />} />
+        <Route path="*" element={<Error />} />
 
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Register" element={<Register />} />
+        <Route
+          path="/Login"
+          element={
+            <CheckPermission hasPermission={!user._id}>
+              <Login />
+            </CheckPermission>
+          }
+        />
+        <Route
+          path="/Register"
+          element={
+            <CheckPermission hasPermission={!user._id}>
+              <Register />
+            </CheckPermission>
+          }
+        />
 
         <Route
           path="/Admin"

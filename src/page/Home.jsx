@@ -25,7 +25,7 @@ export const Home = () => {
   return (
     <Layout>
       <CarouselComponent />
-      <h2 className="text-center">Nuestros productos destacados</h2>
+      <h2 className="text-center my-4">Nuestros productos destacados</h2>
       <SliderComponent products={products} />
     </Layout>
   );
