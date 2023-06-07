@@ -4,7 +4,7 @@ import { PersonFill} from "react-bootstrap-icons";
 import styled from "styled-components";
 import { useContext, useState } from "react";
 import { UserContext } from "../contexts/userContext";
-import logo  from '../assets/imagenes/logo/logo.png';
+import logo from  "../assets/imagenes/logo/logo.png";
 const HOST_SERVER = import.meta.env.VITE_HOST_SERVER;
 
 const LinkComponent = styled(Link)`
@@ -64,7 +64,7 @@ const imgRepartidos = "https://elcomercio.pe/resizer/D4MbctPzmLNMtkxfL9WowHmOg4Q
 
 
 
-export const ModalLoginMerge = () => {
+export const ModalLogin = () => {
 
   const [show, setShow] = useState(false);
 
@@ -115,7 +115,7 @@ export const ModalLoginMerge = () => {
     setUser(response.data);
     setToken(response.token)
     window.localStorage.setItem('token',response.token)
-    redirect("/user/profile");
+    redirect("/");
   };
 
   return (
@@ -172,7 +172,7 @@ export const ModalLoginMerge = () => {
                       </Form>
                       <div className='d-flex flex-column justify-content-between'>
                           <LinkComponent >No puedo ingresar</LinkComponent>    
-                          <LinkComponent to={"/registers"}>Crear cuenta</LinkComponent>
+                          <LinkComponent to={"/Register"}>Crear cuenta</LinkComponent>
                       </div>
                     </Col> 
                   </Row>   

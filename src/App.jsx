@@ -6,7 +6,6 @@ import { About } from "./page/About";
 import { Error } from "./page/Error";
 import { DetailProduct } from "./page/DetailProduct";
 import { CreateProduct } from "./page/CreateProduct";
-import { Login } from "./page/Login";
 import { Register } from "./page/Register";
 import { Contact } from "./page/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,6 +16,7 @@ import { UserContext } from "./contexts/userContext";
 import { UpdateProduct } from "./page/UpdateProduct";
 import { UpdateUser } from "./page/UpdateUser";
 import { ListProducts } from "./page/ListProducts";
+import { ProfileUser } from "./page/ProfileUser";
 
 function App() {
   const { user } = useContext(UserContext);
@@ -33,7 +33,7 @@ function App() {
         <Route path="/Error" element={<Error />} />
         <Route path="/ProfileUser" element={<ProfileUser />} />
 
-        <Route path="/Login" element={<Login />} />
+        
         <Route path="/Register" element={<Register />} />
 
         <Route

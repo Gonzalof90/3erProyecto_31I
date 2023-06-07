@@ -12,11 +12,12 @@ import {
   CupStraw,
   CurrencyDollar,
   EggFried,
-  PersonFill,
+  
 } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../contexts/userContext";
+import { ModalLogin } from "./ModalLogin";
 
 export const Header = () => {
   const { user, logout } = useContext(UserContext);
@@ -79,9 +80,9 @@ export const Header = () => {
             />
             <Button variant="outline-danger">Buscar</Button>
           </Form>
-          <Nav.Link as={Link} to="/login">
+          <Nav.Link>
             {!user?._id ? (
-              <PersonFill color="#803530" size={50} />
+              <ModalLogin />
             ) : (
               <Button onClick={handleLogout}>Cerrar Sesión</Button>
             )}
