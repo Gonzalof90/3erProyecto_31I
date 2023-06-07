@@ -115,7 +115,7 @@ export const ModalLogin = () => {
     setUser(response.data);
     setToken(response.token)
     window.localStorage.setItem('token',response.token)
-    redirect("/");
+    redirect("/home");
   };
 
   return (

@@ -12,6 +12,7 @@ import {
   CupStraw,
   CurrencyDollar,
   EggFried,
+  PersonFillDash
   
 } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
@@ -84,7 +85,9 @@ export const Header = () => {
             {!user?._id ? (
               <ModalLogin />
             ) : (
-              <Button onClick={handleLogout}>Cerrar Sesión</Button>
+              <Button onClick={handleLogout} >
+                {PersonFillDash}
+              </Button>
             )}
           </Nav.Link>
         </Navbar.Collapse>
