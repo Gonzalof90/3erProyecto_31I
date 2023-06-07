@@ -150,6 +150,7 @@ export const ModalLogin = () => {
                               onChange={handleChangeEmail}
                              
                             />
+                          
                           </FormGroupComponent>
 
                           <FormGroupComponent className="mb-3" controlId="formBasicPassword">
@@ -165,7 +166,7 @@ export const ModalLogin = () => {
                           </FormGroupComponent>
                             <p className="text-danger">{error}</p>
                           <div className='d-flex justify-content-center'>
-                              <Button  type="submit" className='w-75 btn-outline-light' style={{backgroundColor:"#803530",}} onClick={handleClose}>
+                              <Button  type="submit" className='w-75 btn-outline-light' style={{backgroundColor:"#803530",}}>
                                 Iniciar Sesión
                               </Button>
                           </div>

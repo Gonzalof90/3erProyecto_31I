@@ -45,6 +45,9 @@ export const Header = () => {
             <Nav.Link as={Link} to="/About">
               Nosotros
             </Nav.Link>
+            <Nav.Link as={Link} to="/ProfileUser">
+              Perfil Usuario
+            </Nav.Link>
             <Nav.Link as={Link} to="/Contact">
               Contacto
             </Nav.Link>

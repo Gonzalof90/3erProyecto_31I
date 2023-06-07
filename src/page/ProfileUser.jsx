@@ -21,12 +21,12 @@ export const ProfileUser = () => {
   const {user} = useContext(UserContext)
   return (
     <Layout>
+      <h1>PERFIL DE USUARIO</h1>
       <ImgComponent
         src={user.avatar}
         alt=""
         active={user.rol === "ADMIN"}
       />
-      <h1>PERFIL DE USUARIO</h1>
     </Layout>
   );
 };
