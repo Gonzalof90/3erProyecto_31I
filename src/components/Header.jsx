@@ -12,18 +12,40 @@ import {
   CupStraw,
   CurrencyDollar,
   EggFried,
-  PersonFillDash
+  PersonFillDash,
   
 } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../contexts/userContext";
+import { SearchContext } from "../contexts/searchContext";
 import { ModalLogin } from "./ModalLogin";
+import styled from "styled-components";
+
+const ButtonSearch = styled(Button)`
+  background-color: #803530;
+  color: #ffc107;
+`;
 
 export const Header = () => {
   const { user, logout } = useContext(UserContext);
 
   const handleLogout = () => logout();
+
+  const {
+    handleSearchValue,
+    inputValueHeader,
+    handleChangeValueHeader,
+    setKeywordGlobal,
+  } = useContext(SearchContext);
+  const redirect = useNavigate();
+
+  useEffect(() => {
+    if (inputValueHeader === "") {
+      setKeywordGlobal("");
+    }
+  }, [inputValueHeader]);
+
 
   return (
     <Navbar bg="warning" expand="lg" sticky="top">
@@ -75,24 +97,35 @@ export const Header = () => {
               </Nav.Link>
             )}
           </Nav>
+
+          {/* BUSCADOR */}
           <Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Buscar"
               className="me-2"
+              onChange={handleChangeValueHeader}
               aria-label="Search"
+              value={inputValueHeader}
             />
-            <Button variant="outline-danger">Buscar</Button>
+            <ButtonSearch 
+            variant="outline-danger"
+            className="border-0 me-1"
+            onClick={() => handleSearchValue(redirect)}
+            >
+            
+              Buscar
+            </ButtonSearch>
           </Form>
-          <Nav.Link>
+          
             {!user?._id ? (
               <ModalLogin />
             ) : (
-              <Button onClick={handleLogout} >
-                {PersonFillDash}
-              </Button>
+              
+              <Button variant="transparent" onClick={logout}><PersonFillDash color="#000" size={45} /></Button>
+              
             )}
-          </Nav.Link>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>

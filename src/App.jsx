@@ -34,7 +34,14 @@ function App() {
         <Route path="/ProfileUser" element={<ProfileUser />} />
 
         
-        <Route path="/Register" element={<Register />} />
+        <Route
+          path="/Register"
+          element={
+            <CheckPermission hasPermission={!user._id}>
+              <Register />
+            </CheckPermission>
+          }
+        />
 
         <Route
           path="/Admin"

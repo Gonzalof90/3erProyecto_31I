@@ -5,14 +5,49 @@ import defaultImage from "../assets/imagenes/Carrusel/pizza.jpg";
 
 export const SliderComponent = ({ products }) => {
   return (
-    <Slider dots={true} speed={500} slidesToShow={3} slidesToScroll={1}>
+    <Slider
+      dots={true}
+      speed={500}
+      slidesToShow={4}
+      slidesToScroll={1}
+      responsive={[
+        {
+          breakpoint: 320,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 1080,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 1440,
+          settings: {
+            slidesToShow: 4,
+          },
+        },
+      ]}
+    >
       {products.map(({ _id, images, name, description }) => {
         const imagePrimary =
           images.find(({ primary }) => primary)?.url || defaultImage;
 
         return (
           <div key={_id}>
-            <Card style={{ width: "15rem" }} className="my-4 mx-auto border-0 shadow">
+            <Card
+              style={{ width: "15rem" }}
+              className="my-4 mx-auto border-0 shadow"
+            >
               <Card.Img
                 variant="top"
                 src={imagePrimary}
@@ -20,7 +55,10 @@ export const SliderComponent = ({ products }) => {
               />
               <Card.Body>
                 <Card.Title className="fs-6">{name}</Card.Title>
-                <Card.Text style={{ fontSize: ".7rem" }} className="text-truncate">
+                <Card.Text
+                  style={{ fontSize: ".7rem" }}
+                  className="text-truncate"
+                >
                   {description}
                 </Card.Text>
                 <Button

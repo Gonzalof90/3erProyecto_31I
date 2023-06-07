@@ -2,6 +2,11 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { Layout } from "../Layouts/layout";
 import { UserContext } from "../contexts/userContext";
+import { Col, Row } from "react-bootstrap";
+//import backgroundFooD from "../assets/imagenes/ModaImg/backgroundFooD";
+import modalImg from "../assets/imagenes/ModaImg/modalImg.jpeg"
+
+
 
 const ImgComponent = styled.img`
   width: 100px;
@@ -16,17 +21,42 @@ const ImgComponent = styled.img`
   }
 `;
 
+const ComponentBackground = styled.div`
+  background-img : ${modalImg} ;
+  background-size: cover;
+`;
+
+const RowComponent = styled(Row)`
+  border: #fbfbf5 solid;
+  background-color: #fbfbf4 ;
+  border-radius: 3%;
+  height: 58vh;
+ `;
+
 export const ProfileUser = () => {
+
 
   const {user} = useContext(UserContext)
   return (
     <Layout>
-      <h1>PERFIL DE USUARIO</h1>
-      <ImgComponent
-        src={user.avatar}
-        alt=""
-        active={user.rol === "ADMIN"}
-      />
+      <ComponentBackground>
+        <RowComponent className="m-5 d-flex justify-content-around" >
+          <Col sm={12} md={6} className="d-flex flex-column align-items-center justify-content-center" >
+            <h1 >USUARIO</h1>
+              <ImgComponent
+                src={user.avatar}
+                alt={`${user.username}`}
+                active={user.rol === "ADMIN"}
+              />
+          </Col>
+          <Col sm={12} md={6} className="d-flex flex-column align-items-center justify-content-center">
+            <h3>{user.usename}</h3>
+            <p>Hola!</p>
+            <p className="text-muted">{user.email}</p>
+            <p>{user.rol}</p>
+          </Col>
+        </RowComponent>
+      </ComponentBackground>
     </Layout>
   );
 };

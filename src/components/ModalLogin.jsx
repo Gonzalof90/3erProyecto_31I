@@ -10,6 +10,7 @@ const HOST_SERVER = import.meta.env.VITE_HOST_SERVER;
 const LinkComponent = styled(Link)`
   color: #ff601c;
   text-decorartion: none;
+  font-size: 0.7rem;
   transition: 0.35s;
   &:hover {
     color: #ffb80b;
@@ -115,7 +116,7 @@ export const ModalLogin = () => {
     setUser(response.data);
     setToken(response.token)
     window.localStorage.setItem('token',response.token)
-    redirect("/home");
+    response.data.rol === "ADMIN" ?  redirect("/admin") : redirect('/')
   };
 
   return (
@@ -134,11 +135,11 @@ export const ModalLogin = () => {
                 <Container>
                   <Row>
                     <Col md={6} className='overflow-hidden rounded'>
-                      <div className='w-100 d-flex  justify-content-center'>
+                      <div className='w-100 d-flex  justify-content-center pb-2'>
                         <Image style={{objectFit: "cover"}} src={imgRepartidos}/>
                       </div>
                     </Col>
-                    <Col xs={12} md={6} className='d-flex flex-column justify-content-between'>
+                    <Col xs={12} md={6} className='d-flex flex-column justify-content-between pb-2'>
                       <Form onSubmit={handleSubmit} className=''>
                           <FormGroupComponent className="mb-3" controlId="formBasicEmail">
                             <FormLabelComponent  className={email.length > 0 ? 'has-input' : ``}>
