@@ -64,20 +64,6 @@ export const Header = () => {
             <Nav.Link as={Link} to="/Products">
               Productos
             </Nav.Link>
-            <NavDropdown title="Categoria" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">
-                <EggFried color="#803530" size={20} /> Comidas
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                <CupStraw color="#803530" size={20} className="align-center" />
-                Bebidas
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                <CurrencyDollar color="#803530" size={20} />
-                Ofertas
-              </NavDropdown.Item>
-            </NavDropdown>
             <Nav.Link as={Link} to="/Contact">
               Contacto
             </Nav.Link>
