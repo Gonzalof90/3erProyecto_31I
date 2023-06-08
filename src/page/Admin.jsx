@@ -196,16 +196,17 @@ export const Admin = () => {
                           checked={product.available}
                         />
                       </td>
-                      <td>
+                      <td className="d-flex flex-column">
                         <Button
                           as={Link}
                           to={`/products/update/${product._id}`}
+                          variant="warning"
                         >
                           Editar
                         </Button>
 
                         <Button
-                          variant="danger"
+                          style={{backgroundColor:"#FF601C", border:0, marginTop:"5px"}}
                           onClick={() => handleDelete(product)}
                         >
                           Eliminar
@@ -226,6 +227,7 @@ export const Admin = () => {
                 <th>Rol</th>
                 <th>Avatar </th>
                 <th>Activo</th>
+                <th>Opciones</th>
               </tr>
             </thead>
             <tbody>
@@ -237,8 +239,8 @@ export const Admin = () => {
                     <td>{user.rol}</td>
                     <td>
                       <img
-                        width={100}
-                        height={100}
+                        width={50}
+                        height={50}
                         style={{ objectFit: "contain" }}
                         src={user.avatar}
                         alt={user.name}
@@ -250,13 +252,13 @@ export const Admin = () => {
                         checked={user.available}
                       />
                     </td>
-                    <td>
-                      <Button as={Link} to={`/users/update/${user._id}`}>
+                    <td className="d-flex flex-column">
+                      <Button as={Link} to={`/users/update/${user._id}`} variant="warning">
                         Editar
                       </Button>
 
                       <Button
-                        variant="danger"
+                        style={{backgroundColor:"#FF601C", border:0, marginTop:"5px"}}
                         onClick={() => handleDeleteUser(user)}
                       >
                         Eliminar

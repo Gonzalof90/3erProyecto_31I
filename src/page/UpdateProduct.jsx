@@ -77,6 +77,8 @@ export const UpdateProduct = () => {
     });
   };
 
+ 
+
   const handleImages = ({ target }) => {
     const imagesMapped = product.images.map((img) => {
       if (img.id === parseInt(target.id)) {
@@ -336,6 +338,9 @@ export const UpdateProduct = () => {
                 <Form.Text className="text-danger"></Form.Text>
               </Form.Group>
             </Col>
+
+        
+
             <Col md={6} lg={3}>
               <Form.Group className="my-3">
                 <Button variant="warning" type="submit" className="w-100 mt-3 border border-dark">

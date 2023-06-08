@@ -38,7 +38,9 @@ export const SliderComponent = ({ products }) => {
         },
       ]}
     >
-      {products.map(({ _id, images, name, description }) => {
+      {products.map(({ _id, images, name, description,available }) => {
+ 
+
         const imagePrimary =
           images.find(({ primary }) => primary)?.url || defaultImage;
 
@@ -67,7 +69,7 @@ export const SliderComponent = ({ products }) => {
                   variant="danger"
                   className="btn-sm"
                 >
-                  Ver mas
+                  Ver más
                 </Button>
               </Card.Body>
             </Card>
