@@ -48,6 +48,54 @@
       ]
     },
     {
+     
+      "name": "Pizza Margarita",
+      "description": "Todo un clásico entre las recetas más tradicionales que tiene la pizza. Su nombre original en italiano es Margheritta, como un homenaje, dice la leyenda, a la reina de Italia a finales del siglo XIX, Margarita de Saboya.",
+      "price": 2500,
+      "discount": 7,
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://unareceta.com/wp-content/uploads/2014/05/receta-de-pizza-margarita.jpg"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://st2.depositphotos.com/2380401/5383/i/450/depositphotos_53833167-stock-photo-pizza-margherita-on-dark-wooden.jpg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://st3.depositphotos.com/28215878/32186/i/600/depositphotos_321868506-stock-photo-margarita-pizza-topped-with-basil.jpg"
+        }
+      ]
+    },
+    {
+     
+      "name": "Pizza Calabresa",
+      "description": "La pizza es uno de los platos más famosos en el mundo, y cómo no, su sabor enamora hasta al más fuerte. La versión calabresa, caracterizada por la longaniza y las aceitunas forman una genial combinación para la conocida receta.",
+      "price": 2500,
+      "discount": 7,
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://www.recetas-argentinas.com/base/stock/Recipe/43-image/43-image_web.jpg.webp"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdqpdF9RDjIzlOMwZwKPu2jcw_xgNPnRYvvg&usqp=CAU"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://queapetito.com/wp-content/uploads/2020/01/pizza-calabresa.jpg"
+        }
+      ]
+    },
+    {
       "name": "Hamburguesa",
       "price": 2300,
       "discount": 10,
@@ -141,6 +189,52 @@
       ]
     },
     {
+      "name": "Milanesa a Caballo",
+      "price": 3500,
+      "discount": 15,
+      "description": "La milanesa es uno de los platos típicos del bodegón argentino. Y si de típico hablamos, no puede faltar la única e inigualable milanesa a caballo, esta receta se acompaña con papas fritas y huevos fritos. Por otro lado, el término “a caballo” puede explicar que la milanesa es el caballo y los huevos son los jinetes, es decir, se “montan” los huevos sobre la carne.",
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://i.pinimg.com/564x/1e/7f/78/1e7f7887546cecdb0d414ac6901ec8d6--miami-beach-south-beach.jpg"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://i.pinimg.com/564x/1e/7f/78/1e7f7887546cecdb0d414ac6901ec8d6--miami-beach-south-beach.jpg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://i.pinimg.com/564x/1e/7f/78/1e7f7887546cecdb0d414ac6901ec8d6--miami-beach-south-beach.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Parrillada",
+      "price": 3500,
+      "discount": 15,
+      "description": "El asado es el plato insignia de argentina, proveniente de llanura pampeana donde más que una comida típica, hacer asados se convierte en todo un ritual. El asado incluye diferentes tipos de cortes siendo los más utilizados el asado de tira, el vacío y el matambre de vaca o de cerdo, acompañados de achuras como mollejas, chinchulines, riñones, morcillas y chorizos.",
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://t3.ftcdn.net/jpg/01/25/07/28/360_F_125072886_wVcL6rix4HCztZJ4meLdosqsxncaAlCx.jpg"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://buenavibra.es/wp-content/uploads/2018/07/asado-2-600.jpg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://resizer.glanacion.com/resizer/mJBaHPrSB-rKFLk4x450knbl07I=/768x0/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/BCMNCK4U35CBNHAHVLKS3S2R5Y.jpg"
+        }
+      ]
+    },
+    {
       "name": "Empanadas",
       "price": 250,
       "discount": 0,
@@ -162,5 +256,167 @@
           "url": "https://static.eldiario.es/clip/c582f7f0-0466-4175-8be9-0ad06c1113a1_16-9-discover-aspect-ratio_default_0.jpg"
         }
       ]
+    },
+    {
+      "name": "Picadas",
+      "price": 3500,
+      "discount": 15,
+      "description": "La picada es una costumbre bien argentina. En la semana, en el fin de semana, en vacaciones, durante el año muchos se juntan a disfrutar de distintos sabores: quesos, aceitunas, salames, panes, y la lista sigue.",
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://www.cronista.com/files/image/487/487895/636d2e0636819_360_480!.jpg?s=ee33443baa0d79ec4af457e4cf9cb137&d=1668101027"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://picadamix.com.ar/wp-content/uploads/2021/04/picada_tradicional.jpg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://d2r9epyceweg5n.cloudfront.net/stores/001/147/470/products/picada-21-247a2e3aa486ea3c5216069434476606-640-0.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Empanadas",
+      "price": 250,
+      "discount": 0,
+      "description": "Una empanada es una fina masa de pan, masa quebrada u hojaldre rellena con una preparación salada o dulce y cocida al horno o frita. El relleno puede incluir carnes rojas o blancas, pescado, verduras o fruta.",
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://assets.elgourmet.com/wp-content/uploads/2023/03/cover_fpa6sn8vqc_empanadas.jpg"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://resizer.glanacion.com/resizer/othdWx273LRpcCnnGXYd4rZmrwU=/768x0/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/7IXBPJ5JHBDCBHSUDK3CFZ5XHU.jpg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://static.eldiario.es/clip/c582f7f0-0466-4175-8be9-0ad06c1113a1_16-9-discover-aspect-ratio_default_0.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Tacos",
+      "price": 250,
+      "discount": 0,
+      "description": "El taco es una preparación culinaria muy popular de México que consiste en una tortilla, generalmente de maíz, que comúnmente se enrolla para contener dentro diversos ingredientes y algún tipo de salsa y verdura.",
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-0SnqZOGdj9HhCO7cNibV6zkVHk4ha3ZGg&usqp=CAU"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://chefcompass.com/wp-content/uploads/pastor_tacos.jpg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://feelgoodfoodie.net/wp-content/uploads/2017/04/Ground-Beef-Tacos-9.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Pastas",
+      "price": 250,
+      "discount": 0,
+      "description": "Los italianos no solo trajeron a la Argentina sus recetas dentro de las valijas cargadas de ilusiones de nuestros abuelos o bisabuelos hace ya más de un siglo; sino que también, impusieron como ninguna otra comunidad sus hábitos sociales. Y algunos de ellos referidos a la pasta, todavía perduran hasta hoy: la santa pasta de los domingos, los infaltables ñoquis del 29.",
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://resizer.iproimg.com/unsafe/880x/filters:format(webp)/https://assets.iprofesional.com/assets/jpg/2022/11/545301.jpg"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://www.lavanguardia.com/files/article_main_microformat/files/fp/uploads/2020/09/09/5f58b1bb6d322.r_d.627-418-0.jpeg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://cdn.colombia.com/sdi/2019/03/05/recetas-con-pasta-716227.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Sushi",
+      "price": 250,
+      "discount": 0,
+      "description": "El sushi es un plato de la gastronomía japonesa con base de arroz condimentado con vinagre y azúcar. Aunque tradicionalmente se usaba pescado crudo para acompañar el arroz, con el tiempo los ingredientes han ido evolucionando y ahora podemos encontrar desde verduras a pescado cocinado o carne.",
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://www.gourmet.cl/wp-content/uploads/2021/10/Sushi_Interior_Gourmet.jpg"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2021/04/curiosidades-de-la-comida-japonesa.jpg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Sushi_bandeja.jpg/800px-Sushi_bandeja.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Locro",
+      "price": 250,
+      "discount": 0,
+      "description": "Para quienes no sepan a qué nos referimos, el locro es un plato muy argentino, un guiso que se come en el norte sobre todo y que es muy contundente y sabroso.",
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://www.cronista.com/files/image/303/303006/5ffe1eded7a1b.jpg"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://www.lavoz.com.ar/resizer/md1M0wKDddc-QhETHlXpavqdo5M=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/CG7IQY6BXNHYVICOFPEGUNENFY.jpeg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://www.mdzol.com/u/fotografias/m/2022/5/19/f768x1-1223243_1223370_5050.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Humita",
+      "price": 250,
+      "discount": 0,
+      "description": "El sushi es un plato de la gastronomía japonesa con base de arroz condimentado con vinagre y azúcar. Aunque tradicionalmente se usaba pescado crudo para acompañar el arroz, con el tiempo los ingredientes han ido evolucionando y ahora podemos encontrar desde verduras a pescado cocinado o carne.",
+      "images": [
+        {
+          "id": 1,
+          "primary": true,
+          "url": "https://www.gourmet.cl/wp-content/uploads/2021/10/Sushi_Interior_Gourmet.jpg"
+        },
+        {
+          "id": 2,
+          "primary": false,
+          "url": "https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2021/04/curiosidades-de-la-comida-japonesa.jpg"
+        },
+        {
+          "id": 3,
+          "primary": false,
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Sushi_bandeja.jpg/800px-Sushi_bandeja.jpg"
+        }
+      ]
     }
+
   ]

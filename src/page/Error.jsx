@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export const Error = () => {
   return (
     <Layout>
-      <div id="error" style={{backgroundColor:'#FFB80B'}} className="d-flex justify-content-around">
+      <div id="error" style={{backgroundColor:'#FFB80B' }} className="d-flex justify-content-around">
         <div className="d-flex flex-column justify-content-start align-items-center col-5">
           <h1> 🇪​🇷​🇷​🇴​🇷​ ₄₀₄</h1>
           <p>
@@ -28,7 +28,7 @@ export const Error = () => {
             encantado de recomendarte otros platos que seguramente te
             encantarán.{" "}
           </p>
-          <Button as={Link} to="/Home" variant="primary" className="btn-sm">
+          <Button as={Link} to="/Home" variant="danger" className="btn-sm">
             Volver al inicio
           </Button>
         </div>
