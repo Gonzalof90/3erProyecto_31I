@@ -2,15 +2,15 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { Layout } from "../Layouts/layout";
 import { UserContext } from "../contexts/userContext";
-import { Col, Row } from "react-bootstrap";
-//import backgroundFooD from "../assets/imagenes/ModaImg/backgroundFooD";
-import modalImg from "../assets/imagenes/ModaImg/modalImg.jpeg"
+import { Button, Col, Row } from "react-bootstrap";
+import backgrounFooD from "../assets/imagenes/ModaImg/backgrounFooD.jpg";
+
 
 
 
 const ImgComponent = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: contain;
   transition:1s;
@@ -22,15 +22,24 @@ const ImgComponent = styled.img`
 `;
 
 const ComponentBackground = styled.div`
-  background-img : ${modalImg} ;
+  background-image: url('${backgrounFooD}');
   background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const RowComponent = styled(Row)`
-  border: #fbfbf5 solid;
-  background-color: #fbfbf4 ;
+  border: 2px solid rgba(0, 0, 0, 0.9) ;
+  background-color: rgba(255, 255, 255, 0.15) ;
   border-radius: 3%;
-  height: 58vh;
+  height: 55vh;
+  width: 50vw;
+  padding: 1vh;
+  box-shadow: 2px 2px 4px black
+  
  `;
 
 export const ProfileUser = () => {
@@ -40,9 +49,9 @@ export const ProfileUser = () => {
   return (
     <Layout>
       <ComponentBackground>
-        <RowComponent className="m-5 d-flex justify-content-around" >
+        <RowComponent className="" >
           <Col sm={12} md={6} className="d-flex flex-column align-items-center justify-content-center" >
-            <h1 >USUARIO</h1>
+            <h1 className="fw-bold pb-2 text-warning">USUARIO</h1>
               <ImgComponent
                 src={user.avatar}
                 alt={`${user.username}`}
@@ -51,9 +60,10 @@ export const ProfileUser = () => {
           </Col>
           <Col sm={12} md={6} className="d-flex flex-column align-items-center justify-content-center">
             <h3>{user.usename}</h3>
-            <p>Hola!</p>
-            <p className="text-muted">{user.email}</p>
-            <p>{user.rol}</p>
+            <p className="display-6 text-white">Hola!</p>
+            <p className="text-light">{user.email}</p>
+            <p className="text-light">{user.rol}</p>
+            <Button variant="#">Invitar ▶</Button>
           </Col>
         </RowComponent>
       </ComponentBackground>

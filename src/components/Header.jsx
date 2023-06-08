@@ -6,6 +6,7 @@ import {
   Nav,
   NavDropdown,
   Image,
+
 } from "react-bootstrap";
 import logo from "../assets/imagenes/logo/logo.png";
 import {
@@ -48,7 +49,7 @@ export const Header = () => {
 
 
   return (
-    <Navbar bg="warning" expand="lg" sticky="top">
+    <Navbar bg="warning" expand="lg" sticky="top" className="text-center">
       <Container fluid>
         <Navbar.Brand as={Link} to="/home">
           <Image src={logo} style={{ width: "75px" }} />
@@ -113,7 +114,6 @@ export const Header = () => {
             className="border-0 me-1"
             onClick={() => handleSearchValue(redirect)}
             >
-            
               Buscar
             </ButtonSearch>
           </Form>
@@ -122,7 +122,7 @@ export const Header = () => {
               <ModalLogin />
             ) : (
               
-              <Button variant="transparent" onClick={logout}><PersonFillDash color="#000" size={45} /></Button>
+              <Button variant="transparent" onClick={handleLogout}><PersonFillDash color="#000" size={45} /></Button>
               
             )}
           
