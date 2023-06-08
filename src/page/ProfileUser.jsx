@@ -4,6 +4,9 @@ import { Layout } from "../Layouts/layout";
 import { UserContext } from "../contexts/userContext";
 import { Button, Col, Row } from "react-bootstrap";
 import backgrounFooD from "../assets/imagenes/ModaImg/backgrounFooD.jpg";
+import { Send } from "react-bootstrap-icons";
+
+
 
 
 
@@ -33,14 +36,27 @@ const ComponentBackground = styled.div`
 
 const RowComponent = styled(Row)`
   border: 2px solid rgba(0, 0, 0, 0.9) ;
-  background-color: rgba(255, 255, 255, 0.15) ;
+  background-color: rgba(0, 0, 0, 0.5) ;
   border-radius: 3%;
   height: 55vh;
   width: 50vw;
   padding: 1vh;
-  box-shadow: 2px 2px 4px black
+  box-shadow: 3px 3px 6px black
   
  `;
+
+const SendButton = styled(Button)`
+  background-color: #803530;  
+  color: #fff;
+  border: none;
+  &:hover{
+    transform: 2s;
+    background-color: #ffc107;
+    
+  }
+
+`;
+
 
 export const ProfileUser = () => {
 
@@ -63,7 +79,7 @@ export const ProfileUser = () => {
             <p className="display-6 text-white">Hola!</p>
             <p className="text-light">{user.email}</p>
             <p className="text-light">{user.rol}</p>
-            <Button variant="#">Invitar ▶</Button>
+            <SendButton>Invitar <span><Send /></span></SendButton>
           </Col>
         </RowComponent>
       </ComponentBackground>
