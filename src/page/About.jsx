@@ -7,6 +7,7 @@ import nosotros5 from "../assets/imagenes/nosotros/nosotros5.jpg"
 import nosotros3 from "../assets/imagenes/nosotros/nosotros3.jpg"
 import nosotros4 from "../assets/imagenes/nosotros/nosotros4.jpg"
 import nosotros6 from "../assets/imagenes/nosotros/nosotros6.jpg"
+import nosotros7 from "../assets/imagenes/nosotros/nosotros7.jpg"
 import { Github, Whatsapp } from "react-bootstrap-icons";
 
 
@@ -18,9 +19,10 @@ export const About = () => {
   return (
     <Layout>
     <h1 className="m-4 p-2" >SOBRE NOSOTROS</h1>
+    <div className="d-flex flex-column justify-content-center ">
     <div>
 
-    <p className="m-4 p-2" >Bienvenido a Dev Food, la plataforma líder en entrega de comidas rápidas. Nos enorgullece ofrecerte una experiencia gastronómica deliciosa y conveniente, brindándote acceso a una amplia variedad de platos preparados con ingredientes frescos y de alta calidad. <br/>
+    <p className="m-4 p-2 " >Bienvenido a Dev Food, la plataforma líder en entrega de comidas rápidas. Nos enorgullece ofrecerte una experiencia gastronómica deliciosa y conveniente, brindándote acceso a una amplia variedad de platos preparados con ingredientes frescos y de alta calidad. <br/>
 
 En Dev Food, nuestra misión es satisfacer tus antojos y ofrecerte un servicio rápido y eficiente para que disfrutes de tus comidas favoritas sin tener que salir de casa. Estamos aquí para simplificar tu vida ocupada y llevar la comida que más te gusta directamente a tu puerta. <br/>
 
@@ -38,7 +40,7 @@ En Dev Food, estamos comprometidos con tu satisfacción y comodidad. Nos esforza
 
 ¡Descarga la aplicación Dev Food hoy mismo y comienza a disfrutar de una experiencia gastronómica rápida, deliciosa y sin complicaciones!</p>
     </div>
-    <div className="d-flex flex-wrap gap-3 m-4" >
+    <div className="d-flex justify-content-center flex-wrap gap-3 m-4 " >
 
     <div> 
     <Card style={{ width: '12rem' }}>
@@ -171,10 +173,27 @@ En Dev Food, estamos comprometidos con tu satisfacción y comodidad. Nos esforza
       </Card.Body>
     </Card>
     </div>
-    
-   
+    <div> 
+    <Card style={{ width: '12rem' }}>
+      <Card.Img variant="top" src={nosotros7} />
+      <Card.Body>
+        <Card.Title>Rodrigo Singh</Card.Title>
+        <Card.Text>
+          Full-stack Developer
+        </Card.Text>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+      </ListGroup>
+      <Card.Body className="d-flex justify-content-around">
+        <Card.Link href="#"><Whatsapp color="#803530" size={30}/></Card.Link>
+        <Card.Link href="#"><Github color="#803530" size={30}/></Card.Link>
+      </Card.Body>
+    </Card>
     </div>
-
+    
+    </div>
+    </div>
     </Layout>
    
   )
