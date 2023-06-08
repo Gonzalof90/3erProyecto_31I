@@ -18,19 +18,19 @@ export const Footer = () => {
         <p>© Todos los derechos reservados</p>
       </div>
       <div>
-        <Navbar.Brand href="#" className="mx-2" >
+        <Navbar.Brand as ={Link} to="/Error" className="mx-2" >
           <Facebook color="#803530" size={30}/>
         </Navbar.Brand>
-        <Navbar.Brand href="#" className="mx-2" >
+        <Navbar.Brand as ={Link} to="/Error" className="mx-2" >
 
           <Instagram color="#803530" size={30}/>
 
         </Navbar.Brand>
-          <Navbar.Brand as ={Link} to="/Error" href="#" className="mx-2" >
+          <Navbar.Brand as ={Link} to="/Error"  className="mx-2" >
           <Tiktok color="#803530" size={30}/>
 
           </Navbar.Brand>
-          <Navbar.Brand href="#" className="mx-2" > 
+          <Navbar.Brand as ={Link} to="/Error" className="mx-2" > 
           <Linkedin color="#803530" size={30}/>
           </Navbar.Brand>
       </div>
