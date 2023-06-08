@@ -67,7 +67,7 @@ export const Admin = () => {
     }
   };
 
-  const handleDelete = ({ id, name }) => {
+  const handleDelete = ({ _id, name }) => {
     mySwal
       .fire({
         title: "Estas seguro de eliminar el producto:",
@@ -80,7 +80,7 @@ export const Admin = () => {
       })
       .then((result) => {
         if (result.isConfirmed) {
-          fetch(`${serverHost}/products/${id}`, {
+          fetch(`${serverHost}/products/${_id}`, {
             method: "DELETE",
             headers: {
               Authorization: token,
@@ -89,7 +89,7 @@ export const Admin = () => {
           })
             .then((res) => res.json())
             .then(({ ok, message }) => {
-              console.log({ ok, message });
+           getProducts(keywordGlobal)
               mySwal
                 .fire({
                   title: message,
@@ -98,7 +98,46 @@ export const Admin = () => {
                   showConfirmButton: false,
                 })
                 .then(() => {
-                  ok ? redirect("/") : logout();
+                  ok ? redirect("/admin") : logout();
+                });
+            });
+        }
+      });
+  };
+
+
+  const handleDeleteUser = ({ _id, username }) => {
+    mySwal
+      .fire({
+        title: "Estas seguro de eliminar el usuario:",
+        text: username,
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
+        confirmButtonText: "Eliminar",
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          fetch(`${serverHost}/users/${_id}`, {
+            method: "DELETE",
+            headers: {
+              Authorization: token,
+              "Content-Type": "application/json",
+            },
+          })
+            .then((res) => res.json())
+            .then(({ ok, message }) => {
+           getUsers()
+              mySwal
+                .fire({
+                  title: message,
+                  icon: ok ? "success" : "error",
+                  timer: 2000,
+                  showConfirmButton: false,
+                })
+                .then(() => {
+                  ok ? redirect("/admin") : logout();
                 });
             });
         }
@@ -218,7 +257,7 @@ export const Admin = () => {
 
                       <Button
                         variant="danger"
-                        onClick={() => handleDelete(user)}
+                        onClick={() => handleDeleteUser(user)}
                       >
                         Eliminar
                       </Button>
