@@ -2,6 +2,7 @@
     {
      
       "name": "Pizza Napolitana",
+      "available": false,
       "description": "La pizza napolitana, de masa tierna y delgada pero bordes altos, es la versión propia de la cocina napolitana de la pizza redonda. El término pizza napoletana, por su importancia histórica o regional, se emplea en algunas zonas como sinónimo de pizza tonda.",
       "price": 2500,
       "discount": 7,
@@ -28,6 +29,7 @@
       "name": "Pizza Fugazzeta",
       "description": "La fugazzeta, también llamada fugazetta rellena, es una variedad de pizza argentina, originada en Buenos Aires, que consiste en colocar el queso entre dos discos de pizza, a modo de relleno, sobre el cual se agrega cebolla.",
       "price": 2100,
+      "available": false,
       "discount": 5,
       "images": [
         {
@@ -50,6 +52,7 @@
     {
      
       "name": "Pizza Margarita",
+      "available": false,
       "description": "Todo un clásico entre las recetas más tradicionales que tiene la pizza. Su nombre original en italiano es Margheritta, como un homenaje, dice la leyenda, a la reina de Italia a finales del siglo XIX, Margarita de Saboya.",
       "price": 2500,
       "discount": 7,
@@ -74,6 +77,7 @@
     {
      
       "name": "Pizza Calabresa",
+      "available": false,
       "description": "La pizza es uno de los platos más famosos en el mundo, y cómo no, su sabor enamora hasta al más fuerte. La versión calabresa, caracterizada por la longaniza y las aceitunas forman una genial combinación para la conocida receta.",
       "price": 2500,
       "discount": 7,
@@ -97,6 +101,7 @@
     },
     {
       "name": "Hamburguesa",
+      "available": false,
       "price": 2300,
       "discount": 10,
       "description": "Una hamburguesa es un sándwich hecho a base de carne molida o de origen vegetal, ​ aglutinada en forma de filete cocinado a la parrilla o a la plancha, aunque también puede freírse u hornearse. Fuera del ámbito de habla hispana, es más común encontrar la denominación estadounidense burger, acortamiento de hamburger.",
@@ -121,6 +126,7 @@
     },
     {
       "name": "Sandwich de Milanesa",
+      "available": false,
       "price": 1200,
       "discount": 8,
       "description": "El sándwich​ de milanesa es un plato típico en la gastronomía argentina y tucumana. Se compone de dos rebanadas de pan entre las cuales se coloca una milanesa, lechuga, tomate y ocasionalmente cebolla; lleva como aderezo distintas salsas como mayonesa, mostaza o kétchup.",
@@ -144,6 +150,7 @@
     },
     {
       "name": "Lomito",
+      "available": false,
       "price": 1450,
       "discount":10,
       "description": "El lomito, sándwich de lomo o simplemente lomo es un sándwich típico de las gastronomías argentina, paraguaya y uruguaya",
@@ -167,6 +174,7 @@
     },
     {
       "name": "Milanesa a la Napolitana",
+      "available": false,
       "price": 3500,
       "discount": 15,
       "description": "La milanesa a la napolitana es un plato típico de la gastronomía rioplatense propia de Argentina y Uruguay que tiene su origen en la influencia de la inmigración italiana.",
@@ -190,6 +198,7 @@
     },
     {
       "name": "Milanesa a Caballo",
+      "available": false,
       "price": 3500,
       "discount": 15,
       "description": "La milanesa es uno de los platos típicos del bodegón argentino. Y si de típico hablamos, no puede faltar la única e inigualable milanesa a caballo, esta receta se acompaña con papas fritas y huevos fritos. Por otro lado, el término “a caballo” puede explicar que la milanesa es el caballo y los huevos son los jinetes, es decir, se “montan” los huevos sobre la carne.",
@@ -213,6 +222,7 @@
     },
     {
       "name": "Parrillada",
+      "available": false,
       "price": 3500,
       "discount": 15,
       "description": "El asado es el plato insignia de argentina, proveniente de llanura pampeana donde más que una comida típica, hacer asados se convierte en todo un ritual. El asado incluye diferentes tipos de cortes siendo los más utilizados el asado de tira, el vacío y el matambre de vaca o de cerdo, acompañados de achuras como mollejas, chinchulines, riñones, morcillas y chorizos.",
@@ -236,6 +246,7 @@
     },
     {
       "name": "Empanadas",
+      "available": false,
       "price": 250,
       "discount": 0,
       "description": "Una empanada es una fina masa de pan, masa quebrada u hojaldre rellena con una preparación salada o dulce y cocida al horno o frita. El relleno puede incluir carnes rojas o blancas, pescado, verduras o fruta.",
@@ -259,6 +270,7 @@
     },
     {
       "name": "Picadas",
+      "available": false,
       "price": 3500,
       "discount": 15,
       "description": "La picada es una costumbre bien argentina. En la semana, en el fin de semana, en vacaciones, durante el año muchos se juntan a disfrutar de distintos sabores: quesos, aceitunas, salames, panes, y la lista sigue.",
@@ -282,6 +294,7 @@
     },
     {
       "name": "Empanadas",
+      "available": false,
       "price": 250,
       "discount": 0,
       "description": "Una empanada es una fina masa de pan, masa quebrada u hojaldre rellena con una preparación salada o dulce y cocida al horno o frita. El relleno puede incluir carnes rojas o blancas, pescado, verduras o fruta.",
@@ -305,6 +318,7 @@
     },
     {
       "name": "Tacos",
+      "available": false,
       "price": 250,
       "discount": 0,
       "description": "El taco es una preparación culinaria muy popular de México que consiste en una tortilla, generalmente de maíz, que comúnmente se enrolla para contener dentro diversos ingredientes y algún tipo de salsa y verdura.",
@@ -328,6 +342,7 @@
     },
     {
       "name": "Pastas",
+      "available": false,
       "price": 250,
       "discount": 0,
       "description": "Los italianos no solo trajeron a la Argentina sus recetas dentro de las valijas cargadas de ilusiones de nuestros abuelos o bisabuelos hace ya más de un siglo; sino que también, impusieron como ninguna otra comunidad sus hábitos sociales. Y algunos de ellos referidos a la pasta, todavía perduran hasta hoy: la santa pasta de los domingos, los infaltables ñoquis del 29.",
@@ -351,6 +366,7 @@
     },
     {
       "name": "Sushi",
+      "available": false,
       "price": 250,
       "discount": 0,
       "description": "El sushi es un plato de la gastronomía japonesa con base de arroz condimentado con vinagre y azúcar. Aunque tradicionalmente se usaba pescado crudo para acompañar el arroz, con el tiempo los ingredientes han ido evolucionando y ahora podemos encontrar desde verduras a pescado cocinado o carne.",
@@ -374,6 +390,7 @@
     },
     {
       "name": "Locro",
+      "available": false,
       "price": 250,
       "discount": 0,
       "description": "Para quienes no sepan a qué nos referimos, el locro es un plato muy argentino, un guiso que se come en el norte sobre todo y que es muy contundente y sabroso.",
@@ -397,6 +414,7 @@
     },
     {
       "name": "Humita",
+      "available": false,
       "price": 250,
       "discount": 0,
       "description": "El sushi es un plato de la gastronomía japonesa con base de arroz condimentado con vinagre y azúcar. Aunque tradicionalmente se usaba pescado crudo para acompañar el arroz, con el tiempo los ingredientes han ido evolucionando y ahora podemos encontrar desde verduras a pescado cocinado o carne.",

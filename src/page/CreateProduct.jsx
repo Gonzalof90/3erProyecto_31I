@@ -204,6 +204,7 @@ export const CreateProduct = () => {
                   value={name}
                   placeholder="Ingresar nombre"
                   onChange={handleInputName}
+                  maxLength={50}
                 />
                 <Form.Text className="text-danger">{errorName}</Form.Text>
               </Form.Group>
@@ -217,6 +218,8 @@ export const CreateProduct = () => {
                   value={price}
                   placeholder="Ingresar precio"
                   onChange={handleInputPrice}
+                  maxLength={50}
+                  min={0}
                 />
                 <Form.Text className="text-danger">{errorPrice}</Form.Text>
               </Form.Group>
@@ -230,6 +233,8 @@ export const CreateProduct = () => {
                   value={discount}
                   placeholder="Ingresar descuento"
                   onChange={handleInputDiscount}
+                  maxLength={50}
+                  min={0}
                 />
                 <Form.Text className="text-danger">{errorDiscount}</Form.Text>
               </Form.Group>
@@ -368,6 +373,7 @@ export const CreateProduct = () => {
                   value={description}
                   placeholder="Ingresar Descripción"
                   onChange={handleInputDescription}
+                  maxLength={500}
                 />
                 <Form.Text className="text-danger">
                   {errorDescription}

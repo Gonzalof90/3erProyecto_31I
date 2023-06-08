@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Layout } from "../Layouts/layout";
 import Slider from "react-slick";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
-import {  useParams } from "react-router-dom";
+import {  Link, useParams } from "react-router-dom";
 const HOST_SERVER = import.meta.env.VITE_HOST_SERVER;
 
 
@@ -84,8 +84,8 @@ export const DetailProduct = () => {
               </span>
             </Col>
             <div className="col-lg-5 m-3" >
-              <Button variant="secondary mx-1">Agrega al Pedido</Button>
-              <Button variant="outline-secondary">Cancelar</Button>
+              <Button variant="secondary mx-1" as={Link} to="/Error">Agrega al Pedido</Button>
+              <Button variant="outline-secondary" as={Link} to="/">Cancelar</Button>
             </div>
           </div>
         </Row>
