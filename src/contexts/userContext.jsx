@@ -13,6 +13,8 @@ export const UserContext = createContext(userInitialState); // {Provider , Consu
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(userInitialState);
   const [token, setToken] = useState(null);
+  
+
 
   const getUser = async (token) => {
     try {
@@ -48,6 +50,7 @@ export const UserProvider = ({ children }) => {
     setUser(userInitialState);
     setToken(null);
     localStorage.clear();
+    
   };
 
   return (

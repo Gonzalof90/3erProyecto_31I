@@ -41,6 +41,9 @@ export const Header = () => {
   } = useContext(SearchContext);
   const redirect = useNavigate();
 
+
+  
+
   useEffect(() => {
     if (inputValueHeader === "") {
       setKeywordGlobal("");
@@ -68,9 +71,11 @@ export const Header = () => {
             <Nav.Link as={Link} to="/About">
               Nosotros
             </Nav.Link>
-            <Nav.Link as={Link} to="/ProfileUser">
-              Perfil Usuario
-            </Nav.Link>
+           {
+            user._id?  <Nav.Link as={Link} to="/ProfileUser">
+            Usuario 
+            </Nav.Link> : null
+           }
             <Nav.Link as={Link} to="/Contact">
               Contacto
             </Nav.Link>

@@ -76,9 +76,9 @@ export const ProfileUser = () => {
           </Col>
           <Col sm={12} md={6} className="d-flex flex-column align-items-center justify-content-center">
             <h3>{user.usename}</h3>
-            <p className="display-6 text-white">Hola!</p>
-            <p className="text-light">{user.email}</p>
-            <p className="text-light">{user.rol}</p>
+            {user._id? <p className="display-6 text-white">Hola!</p> : <p className="display-6 text-white">Ingresa</p>}
+            {user._id?<p className="text-light">{user.email}</p>: <p className="text-light">en tu perfil</p>}
+            {user._id?<p className="text-light">{user.rol}</p>: null}
             <SendButton>Invitar <span><Send /></span></SendButton>
           </Col>
         </RowComponent>
