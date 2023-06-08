@@ -81,6 +81,7 @@ export const Login = () => {
                   value={email}
                   onChange={handleChangeEmail}
                   placeholder="Colocar Correo electrónico"
+                  maxLength={50}
                 />
               </Form.Group>
 
@@ -91,6 +92,7 @@ export const Login = () => {
                   value={password}
                   onChange={handleChangePassword}
                   placeholder="Colocar Contraseña"
+                  maxLength={50}
                 />
               </Form.Group>
               <p className="text-danger">{error}</p>

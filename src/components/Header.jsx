@@ -87,6 +87,7 @@ export const Header = () => {
               onChange={handleChangeValueHeader}
               aria-label="Search"
               value={inputValueHeader}
+              maxLength={50}
             />
             <ButtonSearch
               variant="outline-dark"

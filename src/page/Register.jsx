@@ -113,6 +113,7 @@ export const Register = () => {
                   placeholder="piizaloca@gmail.com"
                   value={email}
                   onChange={handleChangeEmail}
+                  maxLength={50}
                 />
               </Form.Group>
 
@@ -123,6 +124,7 @@ export const Register = () => {
                   value={username}
                   onChange={handleChangeUsername}
                   placeholder="Ej. LocoPorLasPizzas"
+                  maxLength={50}
                 />
               </Form.Group>
 
@@ -133,6 +135,7 @@ export const Register = () => {
                   value={password}
                   onChange={handleChangePassword}
                   placeholder="ComprateUnPancho"
+                  maxLength={50}
                 />
               </Form.Group>
 
@@ -143,6 +146,7 @@ export const Register = () => {
                   value={password2}
                   onChange={handleChangePassword2}
                   placeholder="ComprateUnPancho"
+                  maxLength={50}
                 />
               </Form.Group>
               <p className="text-danger">{error}</p>

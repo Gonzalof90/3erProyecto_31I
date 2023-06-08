@@ -84,6 +84,7 @@ export const UpdateUser = () => {
                   placeholder="Ingresar Avatar"
                   name="avatar"
                   value={user.avatar}
+                  maxLength={100}
                   onChange={handleChangeInput}
                 />
                 <Form.Text className="text-danger"></Form.Text>
@@ -98,13 +99,14 @@ export const UpdateUser = () => {
                   placeholder="Ingresar nombre"
                   name="username"
                   value={user.username}
+                  maxLength={50}
                   onChange={handleChangeInput}
                 />
                 <Form.Text className="text-danger"></Form.Text>
               </Form.Group>
             </Col>
             <Col md={12} lg={4}>
-              {/* PRECIO */}
+              {/* Password */}
               <Form.Group className="mb-3">
                 <Form.Label>Password</Form.Label>
                 <Form.Control
@@ -112,12 +114,13 @@ export const UpdateUser = () => {
                   placeholder="Ingresar password"
                   value={user.password}
                   name="password"
+                  maxLength={100}
                   onChange={handleChangeInput}
                 />
                 <Form.Text className="text-danger"></Form.Text>
               </Form.Group>
             </Col>
-            {/* DESCUENTO */}
+            {/* email */}
             <Col md={12} lg={4}>
               <Form.Group className="mb-3">
                 <Form.Label>Email</Form.Label>
@@ -126,6 +129,7 @@ export const UpdateUser = () => {
                   name="email"
                   placeholder="Ingresar Email"
                   value={user.email}
+                  maxLength={50}
                   onChange={handleChangeInput}
                 />
                 <Form.Text className="text-danger"></Form.Text>
@@ -151,6 +155,27 @@ export const UpdateUser = () => {
                 <Form.Text className="text-danger"></Form.Text>
               </Form.Group>
             </Col>
+
+            {/* Available */}
+            <Col md={12} lg={4}>
+              <Form.Group className="mb-3">
+                <Form.Label>Disponibilidad</Form.Label>
+                <Form.Select
+                  name="available"
+                  aria-label="Available"
+                  onChange={handleChangeInput}
+                >
+                  <option value="true" selected={user.available === true}>
+                  Habilitado
+                  </option>
+                  <option value="false" selected={user.available === false}>
+                    Desabilitado
+                  </option>
+                </Form.Select>
+                <Form.Text className="text-danger"></Form.Text>
+              </Form.Group>
+            </Col>
+
 
             <Col md={6} lg={3}>
               <Form.Group className="my-3">
