@@ -23,24 +23,20 @@ export const UserProvider = ({ children }) => {
         },
       }).then((res) => res.json());
       ok ? setUser(data) : setUser(userInitialState);
-
-      localStorage.setItem("user", JSON.stringify(data))
     } catch (error) {
       console.log(error.message);
     }
   };
 
   useEffect(() => {
-    const tokenStorage = localStorage.getItem("token");
-    const userStorage = localStorage.getItem("user");
-    const userStorageJS = userStorage ? JSON.parse(userStorage) : null;
-    if (tokenStorage) {
-      setToken(tokenStorage);
-      if (!userStorageJS) {
+    try {
+      const tokenStorage = localStorage.getItem("token");
+      if (tokenStorage) {
+        setToken(tokenStorage);
         getUser(tokenStorage);
-      } else {
-        setUser(userStorageJS);
       }
+    } catch (error) {
+      localStorage.clear();
     }
   }, []);
 

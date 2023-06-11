@@ -11,6 +11,7 @@ const serverHost = import.meta.env.VITE_HOST_SERVER;
 export const Admin = () => {
   const [products, setProducts] = useState([]);
   const [users, setUsers] = useState([]);
+  const [orders, setOrders] = useState([]);
   const { token, logout } = useContext(UserContext);
   const mySwal = withReactContent(Swal);
   const redirect = useNavigate();
@@ -30,6 +31,7 @@ export const Admin = () => {
 
   useEffect(() => {
     getUsers();
+    getOrders();
   }, []);
 
   const getProducts = (keyword) => {
@@ -41,6 +43,20 @@ export const Admin = () => {
   useEffect(() => {
     getProducts(keywordGlobal);
   }, [keywordGlobal]);
+
+  const getOrders = () => {
+    fetch(`${serverHost}/orders`, {
+      headers: {
+        Authorization: token,
+      },
+    })
+      .then((res) => res.json())
+      .then(({ data, ok }) => {
+        console.log(data)
+        ok ? setOrders(data) : logout();
+      });
+      
+  };
 
   const handleCheckActive = async (id, { target: { checked } }) => {
     try {
@@ -89,7 +105,7 @@ export const Admin = () => {
           })
             .then((res) => res.json())
             .then(({ ok, message }) => {
-           getProducts(keywordGlobal)
+              getProducts(keywordGlobal);
               mySwal
                 .fire({
                   title: message,
@@ -104,7 +120,6 @@ export const Admin = () => {
         }
       });
   };
-
 
   const handleDeleteUser = ({ _id, username }) => {
     mySwal
@@ -128,7 +143,7 @@ export const Admin = () => {
           })
             .then((res) => res.json())
             .then(({ ok, message }) => {
-           getUsers()
+              getUsers();
               mySwal
                 .fire({
                   title: message,
@@ -206,7 +221,11 @@ export const Admin = () => {
                         </Button>
 
                         <Button
-                          style={{backgroundColor:"#FF601C", border:0, marginTop:"5px"}}
+                          style={{
+                            backgroundColor: "#FF601C",
+                            border: 0,
+                            marginTop: "5px",
+                          }}
                           onClick={() => handleDelete(product)}
                         >
                           Eliminar
@@ -253,12 +272,20 @@ export const Admin = () => {
                       />
                     </td>
                     <td className="d-flex flex-column">
-                      <Button as={Link} to={`/users/update/${user._id}`} variant="warning">
+                      <Button
+                        as={Link}
+                        to={`/users/update/${user._id}`}
+                        variant="warning"
+                      >
                         Editar
                       </Button>
 
                       <Button
-                        style={{backgroundColor:"#FF601C", border:0, marginTop:"5px"}}
+                        style={{
+                          backgroundColor: "#FF601C",
+                          border: 0,
+                          marginTop: "5px",
+                        }}
                         onClick={() => handleDeleteUser(user)}
                       >
                         Eliminar
@@ -272,6 +299,79 @@ export const Admin = () => {
         </Tab>
         <Tab eventKey="pedidos" title="Pedidos">
           Contenido de pedidos
+          {orders.length &&
+            orders.map(({products, userId, status}) => {
+              return (
+                // eslint-disable-next-line react/jsx-key
+                <div key={userId._id}>
+                  
+                  <Table striped bordered hover className="mt-5" >
+                    <thead>
+                      <tr>
+                        <th>Nombre Cliente</th>
+                        <th>Imágenes</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Descuento</th>
+                        <th>Estado</th>
+                        {/*  <th>Acciones</th> */}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {products.length &&
+                        products.map(({product}) => {
+                          return (
+                            <tr key={product._id}>
+                              <td>{userId.username}</td>
+                              <td>
+                                <img
+                                  width={100}
+                                  height={100}
+                                  style={{ objectFit: "contain" }}
+                                  src={
+                                    product.images.find(
+                                      ({ primary }) => primary
+                                    )?.url
+                                  }
+                                  alt={product.name}
+                                />
+                              </td>
+                              <td>{product.name}</td>
+                              <td>{product.price}</td>
+                              <td>{product.discount}</td>
+                              <td>{status}</td>
+                              {/* <td>
+                        <Form.Check
+                          onChange={(event) =>
+                            handleCheckActive(product._id, event)
+                          }
+                          checked={product.available}
+                        />
+                      </td> */}
+                              {/*   <td className="d-flex flex-column">
+                        <Button
+                          as={Link}
+                          to={`/products/update/${product._id}`}
+                          variant="warning"
+                        >
+                          Editar
+                        </Button>
+
+                        <Button
+                          style={{backgroundColor:"#FF601C", border:0, marginTop:"5px"}}
+                          onClick={() => handleDelete(product)}
+                        >
+                          Eliminar
+                        </Button>
+                      </td> */}
+                            </tr>
+                          );
+                        })}
+                    </tbody>
+                  </Table>
+                </div>
+              );
+            })}
         </Tab>
       </Tabs>
     </Layout>
