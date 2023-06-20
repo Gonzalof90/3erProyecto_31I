@@ -72,7 +72,7 @@ export const DetailProduct = () => {
                         style={{ height: "200px" }}
                         src={image.url}
                         alt=""
-                        className="m-auto"
+                        className=""
                       />
                     </div>
                   );
@@ -101,11 +101,11 @@ export const DetailProduct = () => {
             </p>
           </div>
           <div className="mt-3">
-            <Col>
+            <Col >
               <span className="col-lg-6 m-auto">
                 <input
                   rows="3"
-                  className="col-md-5 m-auto"
+                  className="col-md-5 mx-2"
                   type="text"
                   placeholder="escriba acá detalles de este Pedido"
                 />
@@ -114,7 +114,7 @@ export const DetailProduct = () => {
                   placeholder="Cantidad"
                   min={0}
                   max={10}
-                  className="col-md-1 m-auto"
+                  className="col-md-1 mx-2"
                 />
               </span>
             </Col>
