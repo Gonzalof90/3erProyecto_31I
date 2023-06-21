@@ -38,9 +38,7 @@ export const SliderComponent = ({ products }) => {
         },
       ]}
     >
-      {products.map(({ _id, images, name, description,available }) => {
- 
-
+      {products.map(({ _id, images, name, description, available }) => {
         const imagePrimary =
           images.find(({ primary }) => primary)?.url || defaultImage;
 

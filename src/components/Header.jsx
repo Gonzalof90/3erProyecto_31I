@@ -102,7 +102,9 @@ export const Header = () => {
             {!user?._id ? (
               <PersonFill color="#803530" size={50} />
             ) : (
-              <Button onClick={handleLogout} variant="dark">Cerrar Sesión</Button>
+              <Button onClick={handleLogout} variant="dark">
+                Cerrar Sesión
+              </Button>
             )}
           </Nav.Link>
         </Navbar.Collapse>

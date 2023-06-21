@@ -63,7 +63,7 @@ export const ListProducts = () => {
                       <Button
                         as={Link}
                         to={`/products/detail/${_id}`}
-                        variant="primary"
+                        variant="danger"
                         className="btn-sm"
                       >
                         Ver mas

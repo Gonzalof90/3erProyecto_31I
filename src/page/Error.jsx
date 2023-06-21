@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export const Error = () => {
   return (
     <Layout>
-      <div id="error" style={{backgroundColor:'#FFB80B' }} className="d-flex justify-content-around">
+      <div id="error" className="d-flex justify-content-around" style={{backgroundColor:'#FFB80B' }} >
         <div className="d-flex flex-column justify-content-start align-items-center col-5">
           <h1> 🇪​🇷​🇷​🇴​🇷​ ₄₀₄</h1>
           <p>
