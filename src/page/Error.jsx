@@ -32,7 +32,7 @@ export const Error = () => {
             Volver al inicio
           </Button>
         </div>
-        <div>
+        <div  >
           <Image src={pizzaEr} />
         </div>
       </div>
