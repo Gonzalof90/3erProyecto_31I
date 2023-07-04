@@ -12,7 +12,7 @@ export const SliderComponent = ({ products }) => {
       slidesToScroll={1}
       responsive={[
         {
-          breakpoint: 320,
+          breakpoint: 767,
           settings: {
             slidesToShow: 1,
           },
