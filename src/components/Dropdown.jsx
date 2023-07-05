@@ -4,7 +4,7 @@ import { Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export const DropdownComponent = () => {
- return (
+  return (
     <Dropdown>
       <Dropdown.Toggle variant="danger" id="dropdown-basic">
         Redes sociales
@@ -12,28 +12,28 @@ export const DropdownComponent = () => {
 
       <Dropdown.Menu>
         <Dropdown.Item>
-          <Navbar.Brand as={Link} to="/Error" className="mx-2">
+          <Navbar.Brand as={Link} to="/Error" className="mx-2 d-flex">
             <Facebook color="#803530" size={30} />
+            <p className="ms-2">Facebook</p>
           </Navbar.Brand>
-          Facebook
         </Dropdown.Item>
         <Dropdown.Item>
-          <Navbar.Brand as={Link} to="/Error" className="mx-2">
+          <Navbar.Brand as={Link} to="/Error" className="mx-2 d-flex">
             <Instagram color="#803530" size={30} />
+            <p className="ms-2">Instagram</p>
           </Navbar.Brand>
-          Instagram
         </Dropdown.Item>
         <Dropdown.Item>
-          <Navbar.Brand as={Link} to="/Error" className="mx-2">
+          <Navbar.Brand as={Link} to="/Error" className="mx-2 d-flex">
             <Tiktok color="#803530" size={30} />
+            <p className="ms-2">Tik Tok</p>
           </Navbar.Brand>{" "}
-          TikTok
         </Dropdown.Item>
         <Dropdown.Item>
-          <Navbar.Brand as={Link} to="/Error" className="mx-2">
+          <Navbar.Brand as={Link} to="/Error" className="mx-2 d-flex">
             <Linkedin color="#803530" size={30} />
+            <p className="ms-2">Linkedin</p>
           </Navbar.Brand>{" "}
-          Linkedin
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
