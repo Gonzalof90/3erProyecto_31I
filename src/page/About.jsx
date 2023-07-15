@@ -41,25 +41,6 @@ En Dev Food, estamos comprometidos con tu satisfacción y comodidad. Nos esforza
 ¡Descarga la aplicación Dev Food hoy mismo y comienza a disfrutar de una experiencia gastronómica rápida, deliciosa y sin complicaciones!</p>
     </div>
     <div className="d-flex justify-content-center flex-wrap gap-3 m-4 " >
-
-    <div> 
-    <Card style={{ width: '12rem' }}>
-      <Card.Img variant="top" src={nosotros8} />
-      <Card.Body>
-        <Card.Title>Fabricio R. Paz</Card.Title>
-        <Card.Text>
-          Full-stack Developer
-        </Card.Text>
-      </Card.Body>
-      <ListGroup className="list-group-flush">
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-      </ListGroup>
-      <Card.Body className="d-flex justify-content-around">
-        <Card.Link href="#"><Whatsapp color="#803530" size={30}/></Card.Link>
-        <Card.Link href="#"><Github color="#803530" size={30}/></Card.Link>
-      </Card.Body>
-    </Card>
-    </div>
     
     <div> 
     <Card style={{ width: '12rem' }}>
@@ -71,7 +52,7 @@ En Dev Food, estamos comprometidos con tu satisfacción y comodidad. Nos esforza
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+        <ListGroup.Item>"No hay amor más sincero que el amor por la comida"</ListGroup.Item>
       </ListGroup>
       <Card.Body className="d-flex justify-content-around">
         <Card.Link href="#"><Whatsapp color="#803530" size={30}/></Card.Link>
@@ -90,7 +71,7 @@ En Dev Food, estamos comprometidos con tu satisfacción y comodidad. Nos esforza
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+        <ListGroup.Item>"La comida bien hecha es la base de la verdadera felicidad"</ListGroup.Item>
       </ListGroup>
       <Card.Body className="d-flex justify-content-around">
         <Card.Link href="#"><Whatsapp color="#803530" size={30}/></Card.Link>
@@ -109,7 +90,7 @@ En Dev Food, estamos comprometidos con tu satisfacción y comodidad. Nos esforza
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+        <ListGroup.Item>“Comer ajo y vino no es desatino”</ListGroup.Item>
       </ListGroup>
       <Card.Body className="d-flex justify-content-around">
         <Card.Link href="#"><Whatsapp color="#803530" size={30}/></Card.Link>
@@ -128,7 +109,7 @@ En Dev Food, estamos comprometidos con tu satisfacción y comodidad. Nos esforza
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+        <ListGroup.Item>“Come poco y cena temprano si quieres llegar a anciano”</ListGroup.Item>
       </ListGroup>
       <Card.Body className="d-flex justify-content-around">
         <Card.Link href="#"><Whatsapp color="#803530" size={30}/></Card.Link>
@@ -147,7 +128,7 @@ En Dev Food, estamos comprometidos con tu satisfacción y comodidad. Nos esforza
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+        <ListGroup.Item>"La comida es nuestra manera de compartir y celebrar la vida"</ListGroup.Item>
       </ListGroup>
       <Card.Body className="d-flex justify-content-around">
         <Card.Link href="#"><Whatsapp color="#803530" size={30}/></Card.Link>
@@ -165,7 +146,7 @@ En Dev Food, estamos comprometidos con tu satisfacción y comodidad. Nos esforza
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+        <ListGroup.Item>“Come a gusto y placentero y que ayune tu heredero”</ListGroup.Item>
       </ListGroup>
       <Card.Body className="d-flex justify-content-around">
         <Card.Link href="#"><Whatsapp color="#803530" size={30}/></Card.Link>
@@ -183,7 +164,26 @@ En Dev Food, estamos comprometidos con tu satisfacción y comodidad. Nos esforza
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+        <ListGroup.Item>“A buen hambre, no hay pan duro”</ListGroup.Item>
+      </ListGroup>
+      <Card.Body className="d-flex justify-content-around">
+        <Card.Link href="#"><Whatsapp color="#803530" size={30}/></Card.Link>
+        <Card.Link href="#"><Github color="#803530" size={30}/></Card.Link>
+      </Card.Body>
+    </Card>
+    </div>
+    
+    <div> 
+    <Card style={{ width: '12rem' }}>
+      <Card.Img variant="top" src={nosotros8} />
+      <Card.Body>
+        <Card.Title>Fabricio Paz</Card.Title>
+        <Card.Text>
+          Full-stack Developer
+        </Card.Text>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>"El secreto de la cocina está en el amor con el que se prepara"</ListGroup.Item>
       </ListGroup>
       <Card.Body className="d-flex justify-content-around">
         <Card.Link href="#"><Whatsapp color="#803530" size={30}/></Card.Link>

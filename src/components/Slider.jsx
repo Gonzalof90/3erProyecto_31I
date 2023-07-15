@@ -19,6 +19,12 @@ export const SliderComponent = ({ products }) => {
         },
 
         {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
           breakpoint: 768,
           settings: {
             slidesToShow: 2,
@@ -27,13 +33,13 @@ export const SliderComponent = ({ products }) => {
         {
           breakpoint: 1080,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
           },
         },
         {
           breakpoint: 1440,
           settings: {
-            slidesToShow: 4,
+            slidesToShow: 3,
           },
         },
       ]}
