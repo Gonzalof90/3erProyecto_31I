@@ -76,6 +76,17 @@ export const Header = () => {
                 Administrar
               </Nav.Link>
             )}
+
+{user._id && user.rol === "ADMIN" && (
+              <Nav.Link as={Link} to="/Cart">
+                Mi compra
+              </Nav.Link>
+            )}
+            {user._id && user.rol === "REGULAR" && (
+              <Nav.Link as={Link} to="/Cart">
+                Mi compra
+              </Nav.Link>
+            )}
           </Nav>
 
           {/* BUSCADOR */}

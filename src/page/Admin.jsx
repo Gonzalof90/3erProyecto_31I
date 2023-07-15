@@ -248,6 +248,7 @@ export const Admin = () => {
                 <th>Activo</th>
                 <th>Opciones</th>
               </tr>
+              
             </thead>
             <tbody>
               {users.map((user) => {
@@ -308,21 +309,23 @@ export const Admin = () => {
                   <Table striped bordered hover className="mt-5" >
                     <thead>
                       <tr>
-                        <th>Nombre Cliente</th>
                         <th>Imágenes</th>
                         <th>Producto</th>
+                        <th>Cantidad</th>
                         <th>Precio</th>
                         <th>Descuento</th>
                         <th>Estado</th>
                         {/*  <th>Acciones</th> */}
                       </tr>
+                      
+                      <th>Nombre Usuario: <span className="text-primary">{userId.username}</span></th>
+                    
                     </thead>
                     <tbody>
                       {products.length &&
-                        products.map(({product}) => {
+                        products.map(({product,quantity}) => {
                           return (
                             <tr key={product._id}>
-                              <td>{userId.username}</td>
                               <td>
                                 <img
                                   width={100}
@@ -337,6 +340,7 @@ export const Admin = () => {
                                 />
                               </td>
                               <td>{product.name}</td>
+                              <th>{quantity}</th>
                               <td>{product.price}</td>
                               <td>{product.discount}</td>
                               <td>{status}</td>

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CheckPermission } from "./helpers/CheckPermission";
 import { Home } from "./page/Home";
 import { Admin } from "./page/Admin";
+import { Cart } from "./page/Cart";
 import { About } from "./page/About";
 import { Error } from "./page/Error";
 import { DetailProduct } from "./page/DetailProduct";
@@ -54,6 +55,14 @@ function App() {
           element={
             <CheckPermission hasPermission={user._id && user.rol === "ADMIN"}>
               <Admin />
+            </CheckPermission>
+          }
+        />
+         <Route
+          path="/Cart"
+          element={
+            <CheckPermission hasPermission={user._id && user.rol === "ADMIN"}>
+              <Cart />
             </CheckPermission>
           }
         />

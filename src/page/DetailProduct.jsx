@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Layout } from "../Layouts/layout";
 import Slider from "react-slick";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
@@ -11,9 +11,12 @@ const HOST_SERVER = import.meta.env.VITE_HOST_SERVER;
 export const DetailProduct = () => {
   const redirect = useNavigate();
   const [product, setProduct] = useState({});
+  const [stateQuantity, setQuantity] = useState(1);
+  const textareaRef = useRef();
   const { idProduct } = useParams();
   const { user, token } = useContext(UserContext);
   const swal = withReactContent(Swal);
+  const [existInOrder, setExistInOrder] = useState(false);
 
   useEffect(() => {
     fetch(`${HOST_SERVER}/products/${idProduct}`)
@@ -21,6 +24,31 @@ export const DetailProduct = () => {
       .then(({ data, ok }) => (ok ? setProduct(data) : null))
       .catch((err) => console.error(err));
   }, [idProduct]);
+
+  const getQuantity = async () => {
+    if (user._id) {
+      const { ok, data } = await fetch(`${HOST_SERVER}/order/getQuantity`, {
+        body: JSON.stringify({
+          userId: user._id,
+          productId: idProduct,
+        }),
+        method: "POST",
+        headers: {
+          Authorization: token,
+          "Content-Type": "application/json",
+        },
+      }).then((res) => res.json());
+      if (ok) {
+        setQuantity(data);
+        setExistInOrder(true);
+      }
+    }
+  };
+
+  useEffect(() => {
+    console.log(textareaRef.current);
+    getQuantity();
+  }, [idProduct, token, user]);
 
   const formatterPeso = new Intl.NumberFormat("es-CO", {
     style: "currency",
@@ -34,6 +62,7 @@ export const DetailProduct = () => {
         body: JSON.stringify({
           userId: user._id,
           productId: _id,
+          comment: textareaRef.value,
         }),
         method: "PUT",
         headers: {
@@ -48,7 +77,50 @@ export const DetailProduct = () => {
         showConfirmButton: false,
         timer: 1500,
       });
+      ok && setExistInOrder(true);
       !ok && redirect("/login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleMoreQuantity = async (_id) => {
+    try {
+      const { ok, data } = await fetch(`${HOST_SERVER}/order/moreQuantity`, {
+        body: JSON.stringify({
+          userId: user._id,
+          productId: _id,
+        }),
+        method: "PUT",
+        headers: {
+          Authorization: token,
+          "Content-Type": "application/json",
+        },
+      }).then((res) => res.json());
+      ok && setQuantity(+data.quantity);
+      ok && setExistInOrder(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleLessQuantity = async (_id) => {
+    try {
+      if (stateQuantity > 1) {
+        const { ok, data } = await fetch(`${HOST_SERVER}/order/lessQuantity`, {
+          body: JSON.stringify({
+            userId: user._id,
+            productId: _id,
+          }),
+          method: "PUT",
+          headers: {
+            Authorization: token,
+            "Content-Type": "application/json",
+          },
+        }).then((res) => res.json());
+        ok && setQuantity(+data.quantity);
+        ok && setExistInOrder(true);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -80,7 +152,7 @@ export const DetailProduct = () => {
               : null}
           </Slider>
 
-          <div className="col-md-6">
+          <div className="col-md-6 d-inline-block">
             <h5 className="text-primary">{product.name}</h5>
             <p className="text-muted">{product.description}</p>
             <span className="text-success mx-2 display-6">
@@ -88,7 +160,7 @@ export const DetailProduct = () => {
                 product.price - (product.price * product.discount) / 100
               )}
             </span>
-            <p>
+            <p className="">
               <span className="text-primary text-decoration-line-through mx-3">
                 {formatterPeso.format(product.price)}
               </span>
@@ -99,34 +171,57 @@ export const DetailProduct = () => {
                 {product.discount}% OFF
               </span>
             </p>
-          </div>
-          <div className="mt-3">
-            <Col >
-              <span className="col-lg-6 m-auto">
-                <input
-                  rows="3"
-                  className="col-md-5 mx-2"
-                  type="text"
-                  placeholder="escriba acá detalles de este Pedido"
-                />
-                <input
-                  type="number"
-                  placeholder="Cantidad"
-                  min={0}
-                  max={10}
-                  className="col-md-1 mx-2"
-                />
+
+            {existInOrder && (
+              <span className="text-success">
+                El producto esta en el carrito
               </span>
-            </Col>
+            )}
+
+            {user._id && (
+              <div className="btn-group mx-2">
+                <button
+                  className="btn btn-light"
+                  onClick={() => handleLessQuantity(product._id)}
+                >
+                  -
+                </button>
+                <span className="p-2">{stateQuantity}</span>
+                <button
+                  className="btn btn-light"
+                  onClick={() => handleMoreQuantity(product._id)}
+                >
+                  +
+                </button>
+              </div>
+            )}
+          </div>
+
+          <div className="mt-3">
+            {user._id && (
+              <Col>
+                <span className="col-lg-6 m-auto">
+                  <textarea
+                    ref={textareaRef}
+                    rows="3"
+                    className="form-control col-md-5 m-auto"
+                    type="text"
+                    placeholder="Escriba acá detalles de este pedido"
+                  ></textarea>
+                </span>
+              </Col>
+            )}
             <div className="col-lg-5 m-3">
-              <Button
-                variant="secondary mx-1"
-                onClick={() => handleAddProductToOrder(product._id)}
-              >
-                Agrega al Pedido
-              </Button>
+              {user._id && (
+                <Button
+                  variant="secondary mx-1"
+                  onClick={() => handleAddProductToOrder(product._id)}
+                >
+                  Agrega al Pedido
+                </Button>
+              )}
               <Button variant="outline-secondary" as={Link} to="/">
-                Cancelar
+                {user._id ? "Cancelar" : "Volver"}
               </Button>
             </div>
           </div>
