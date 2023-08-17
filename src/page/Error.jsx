@@ -7,8 +7,9 @@ import { Link } from "react-router-dom";
 export const Error = () => {
   return (
     <Layout>
+      <main className="d flex align-items-center">
       <div id="error" className="d-flex justify-content-around" style={{backgroundColor:'#FFB80B' }} >
-        <div className="d-flex flex-column justify-content-start align-items-center col-5">
+        <div className="d-flex flex-column justify-content-center align-items-center col-7 mx-3">
           <h1> 🇪​🇷​🇷​🇴​🇷​ ₄₀₄</h1>
           <p>
             {" "}
@@ -32,10 +33,11 @@ export const Error = () => {
             Volver al inicio
           </Button>
         </div>
-        <div  >
+        <div className="d-flex justify-content-center align-items-center col-4" >
           <Image src={pizzaEr} />
         </div>
       </div>
+      </main>
     </Layout>
   );
 };

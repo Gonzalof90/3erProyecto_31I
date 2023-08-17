@@ -144,7 +144,7 @@ export const DetailProduct = () => {
                         style={{ height: "200px" }}
                         src={image.url}
                         alt=""
-                        className="m-auto"
+                        className=""
                       />
                     </div>
                   );
