@@ -171,7 +171,7 @@ export const Admin = () => {
             Nuevo Menu
           </Button>
 
-          <Table striped bordered hover className="mt-5">
+          <Table striped bordered responsive hover className="mt-5 ">
             <thead>
               <tr>
                 <th>Nombre</th>
